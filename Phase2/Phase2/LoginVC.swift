@@ -44,15 +44,17 @@ class LoginVC: UIViewController {
                 self.performSegueWithIdentifier("selectStudentView", sender:self);
             }
         }
+        
+        
+        // check for empty fields
+        if(username!.isEmpty || password!.isEmpty)
+        {
+            // display alert message
+            displayMyAlertMessage("All Fields are required");
+            return;
+        }
     }
-    
-    // check for empty fields
-    if(username!.isEmpty || password!.isEmpty)
-    {
-        // display alert message
-        displayMyAlertMessage("All Fields are required");
-        return;
-    }
+
 
     func displayMyAlertMessage(userMessage:String)
     {
