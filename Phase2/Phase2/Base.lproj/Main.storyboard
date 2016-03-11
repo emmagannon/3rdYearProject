@@ -414,20 +414,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvg-Lj-b0D">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.048870686410000003" green="0.75521515049999999" blue="0.43013878579999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="GO">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="638" y="644" width="69" height="59"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="IOt-iK-j4C" kind="showDetail" id="AHW-rV-EFP"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9x-2s-AzE">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.75521515049999999" green="0.079866691801941045" blue="0.13758823693905461" alpha="1" colorSpace="calibratedRGB"/>
@@ -442,26 +428,32 @@
                                     <segue destination="5T9-I2-HiF" kind="showDetail" id="SCh-WM-qDz"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6bY-YY-Qkc">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvg-Lj-b0D">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.048870686410000003" green="0.75521515049999999" blue="0.43013878579999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="GO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="144" y="142" width="513" height="402"/>
+                                    <rect key="frame" x="638" y="644" width="82" height="59"/>
                                 </variation>
-                            </imageView>
+                                <connections>
+                                    <segue destination="IOt-iK-j4C" kind="showDetail" id="AHW-rV-EFP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12761093039999999" green="0.8187880622" blue="0.85387352750000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Tvg-Lj-b0D"/>
                                 <exclude reference="l9x-2s-AzE"/>
-                                <exclude reference="6bY-YY-Qkc"/>
+                                <exclude reference="Tvg-Lj-b0D"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
-                                <include reference="Tvg-Lj-b0D"/>
                                 <include reference="l9x-2s-AzE"/>
-                                <include reference="6bY-YY-Qkc"/>
+                                <include reference="Tvg-Lj-b0D"/>
                             </mask>
                         </variation>
                     </view>

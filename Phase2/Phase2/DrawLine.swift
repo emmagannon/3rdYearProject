@@ -18,6 +18,12 @@ class DrawLine: UIView {
     let path = UIBezierPath()
     var shouldClear = false
     var view: UIView?
+    var start = CGPoint()
+    var end = CGPoint()
+    var startMin = CGPoint(x: 335, y: 500)
+    var startMax = CGPoint(x: 360, y: 510)
+    var endMin = CGPoint(x: 440, y: 500)
+    var endMax = CGPoint(x: 465, y: 510)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,6 +44,8 @@ class DrawLine: UIView {
         lines.append(touch.locationInView(self))
         let position = touch.locationInView(view)
         print(position)
+        
+        start = position
         
     }
     
@@ -63,6 +71,10 @@ class DrawLine: UIView {
         let touch = touches.first!
         let position1 = touch.locationInView(view)
         print(position1)
+        
+        end = position1
+        
+    
     }
     
     func getMidpointFromPointA(a: CGPoint, andB b: CGPoint) ->  CGPoint {
@@ -102,8 +114,25 @@ class DrawLine: UIView {
             
             path.stroke()
         }
-           }
+        
+        /*
+        if((start.x > startMin.x && start.y > startMin.y) && (start.x < startMax.x && start.y < startMax.y))
+        {
+            print("correct start position")
+        }
+        */
+        if((end.x > endMin.x && end.y > endMin.y) && (end.x < endMax.x && end.y < endMax.y))
+        {
+            print("correct end position")
+        }
+
+        
+        /*
+        if(((start.x > startMin.x && start.y > startMin.y) && (start.x < startMax.x && start.y < startMax.y)) && ((end.x > endMin.x && end.y > endMin.y) && (end.x < endMax.x && end.y < endMax.y)))
+        {
+            print("correct position")
+        }
+        */
+    }
     
-
-
 }

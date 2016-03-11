@@ -27,6 +27,7 @@
 		B591F5D21C886B32001F2043 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B591F5D11C886B32001F2043 /* UIKit.framework */; };
 		B591F5D41C886B46001F2043 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B591F5D31C886B46001F2043 /* CoreGraphics.framework */; };
 		B59C53AE1C92165200BF8A07 /* IntroFinal.gif in Resources */ = {isa = PBXBuildFile; fileRef = B59C53AD1C92165200BF8A07 /* IntroFinal.gif */; };
+		B5B42C241C92EDFE0005839E /* StudentModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5B42C221C92EDFE0005839E /* StudentModel.xcdatamodeld */; };
 		B5F0D3E71C91A76D00B8DF0E /* gifFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0D3E61C91A76D00B8DF0E /* gifFramework.swift */; };
 		B5F0D3E91C91C92300B8DF0E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0D3E81C91C92300B8DF0E /* LoginVC.swift */; };
 		B5F0D3EB1C91F03F00B8DF0E /* FizzyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0D3EA1C91F03F00B8DF0E /* FizzyVC.swift */; };
@@ -94,6 +95,7 @@
 		B591F5D11C886B32001F2043 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B591F5D31C886B46001F2043 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B59C53AD1C92165200BF8A07 /* IntroFinal.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = IntroFinal.gif; path = ../../IntroFinal.gif; sourceTree = "<group>"; };
+		B5B42C231C92EDFE0005839E /* StudentModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudentModel.xcdatamodel; sourceTree = "<group>"; };
 		B5F0D3E61C91A76D00B8DF0E /* gifFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = gifFramework.swift; path = ../../../Downloads/gifFramework.swift; sourceTree = "<group>"; };
 		B5F0D3E81C91C92300B8DF0E /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B5F0D3EA1C91F03F00B8DF0E /* FizzyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FizzyVC.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		B583D82F1C86F28100767754 = {
 			isa = PBXGroup;
 			children = (
+				B5B42C221C92EDFE0005839E /* StudentModel.xcdatamodeld */,
 				B591F5D31C886B46001F2043 /* CoreGraphics.framework */,
 				B591F5D11C886B32001F2043 /* UIKit.framework */,
 				B583D83A1C86F28100767754 /* Phase2 */,
@@ -402,6 +405,7 @@
 				B5F0D3E71C91A76D00B8DF0E /* gifFramework.swift in Sources */,
 				B5F0D3E91C91C92300B8DF0E /* LoginVC.swift in Sources */,
 				B583D8441C86F28100767754 /* Phase2.xcdatamodeld in Sources */,
+				B5B42C241C92EDFE0005839E /* StudentModel.xcdatamodeld in Sources */,
 				B558021B1C905EAB001C5E89 /* RegisterVC.swift in Sources */,
 				B5F0D3EB1C91F03F00B8DF0E /* FizzyVC.swift in Sources */,
 				B583D83C1C86F28100767754 /* AppDelegate.swift in Sources */,
@@ -764,6 +768,16 @@
 			);
 			currentVersion = B583D8431C86F28100767754 /* Phase2.xcdatamodel */;
 			path = Phase2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		B5B42C221C92EDFE0005839E /* StudentModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B5B42C231C92EDFE0005839E /* StudentModel.xcdatamodel */,
+			);
+			currentVersion = B5B42C231C92EDFE0005839E /* StudentModel.xcdatamodel */;
+			path = StudentModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
