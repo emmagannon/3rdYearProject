@@ -7,15 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B509305C1C884A4600D29DAA /* DrawLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509305B1C884A4600D29DAA /* DrawLine.swift */; };
 		B50930651C884F2E00D29DAA /* target.h in Headers */ = {isa = PBXBuildFile; fileRef = B50930641C884F2E00D29DAA /* target.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B50930691C884F2E00D29DAA /* target.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50930621C884F2E00D29DAA /* target.framework */; };
 		B509306A1C884F2E00D29DAA /* target.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B50930621C884F2E00D29DAA /* target.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B558021B1C905EAB001C5E89 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B558021A1C905EAB001C5E89 /* RegisterVC.swift */; };
-		B583D83C1C86F28100767754 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583D83B1C86F28100767754 /* AppDelegate.swift */; };
-		B583D83E1C86F28100767754 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583D83D1C86F28100767754 /* ViewController.swift */; };
 		B583D8411C86F28100767754 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B583D83F1C86F28100767754 /* Main.storyboard */; };
-		B583D8441C86F28100767754 /* Phase2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B583D8421C86F28100767754 /* Phase2.xcdatamodeld */; };
 		B583D8461C86F28100767754 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B583D8451C86F28100767754 /* Assets.xcassets */; };
 		B583D8491C86F28100767754 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B583D8471C86F28100767754 /* LaunchScreen.storyboard */; };
 		B583D87D1C870BF900767754 /* Draw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B583D8761C870BF900767754 /* Draw.framework */; };
@@ -27,10 +22,23 @@
 		B591F5D21C886B32001F2043 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B591F5D11C886B32001F2043 /* UIKit.framework */; };
 		B591F5D41C886B46001F2043 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B591F5D31C886B46001F2043 /* CoreGraphics.framework */; };
 		B59C53AE1C92165200BF8A07 /* IntroFinal.gif in Resources */ = {isa = PBXBuildFile; fileRef = B59C53AD1C92165200BF8A07 /* IntroFinal.gif */; };
-		B5B42C241C92EDFE0005839E /* StudentModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5B42C221C92EDFE0005839E /* StudentModel.xcdatamodeld */; };
-		B5F0D3E71C91A76D00B8DF0E /* gifFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0D3E61C91A76D00B8DF0E /* gifFramework.swift */; };
-		B5F0D3E91C91C92300B8DF0E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0D3E81C91C92300B8DF0E /* LoginVC.swift */; };
-		B5F0D3EB1C91F03F00B8DF0E /* FizzyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0D3EA1C91F03F00B8DF0E /* FizzyVC.swift */; };
+		B5B42C271C931BBC0005839E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B42C261C931BBC0005839E /* libsqlite3.0.tbd */; };
+		B5FAB4941C97227800539971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583D83B1C86F28100767754 /* AppDelegate.swift */; };
+		B5FAB4951C97227C00539971 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583D83D1C86F28100767754 /* ViewController.swift */; };
+		B5FAB4961C97227F00539971 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B558021A1C905EAB001C5E89 /* RegisterVC.swift */; };
+		B5FAB4971C97228300539971 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0D3E81C91C92300B8DF0E /* LoginVC.swift */; };
+		B5FAB4981C97228600539971 /* FizzyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0D3EA1C91F03F00B8DF0E /* FizzyVC.swift */; };
+		B5FAB4991C97228900539971 /* SelectStudentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B42C281C931FD90005839E /* SelectStudentVC.swift */; };
+		B5FAB49A1C97228C00539971 /* StudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBEB6E1C96D526006CED97 /* StudentCell.swift */; };
+		B5FAB49B1C97228F00539971 /* StudentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE15D1C96EFC400B3A9D3 /* StudentInfo.swift */; };
+		B5FAB49D1C97229600539971 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE15F1C96F05000B3A9D3 /* ModelManager.swift */; };
+		B5FAB49E1C9722E100539971 /* gifFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0D3E61C91A76D00B8DF0E /* gifFramework.swift */; };
+		B5FAB4A01C97339F00539971 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE15B1C96EEEA00B3A9D3 /* Util.swift */; };
+		B5FAB4A61C9742C300539971 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B42C261C931BBC0005839E /* libsqlite3.0.tbd */; };
+		B5FAB4AB1C97463500539971 /* myData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B5FAB4AA1C97463500539971 /* myData.sqlite */; };
+		B5FCE1521C96DC7300B3A9D3 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE1511C96DC7300B3A9D3 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B5FCE1541C96DC9100B3A9D3 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE1531C96DC9100B3A9D3 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B5FCE1561C96DCA000B3A9D3 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE1551C96DCA000B3A9D3 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +91,6 @@
 		B583D83B1C86F28100767754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B583D83D1C86F28100767754 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B583D8401C86F28100767754 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B583D8431C86F28100767754 /* Phase2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Phase2.xcdatamodel; sourceTree = "<group>"; };
 		B583D8451C86F28100767754 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B583D8481C86F28100767754 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B583D84A1C86F28100767754 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,10 +102,24 @@
 		B591F5D11C886B32001F2043 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B591F5D31C886B46001F2043 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B59C53AD1C92165200BF8A07 /* IntroFinal.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = IntroFinal.gif; path = ../../IntroFinal.gif; sourceTree = "<group>"; };
-		B5B42C231C92EDFE0005839E /* StudentModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudentModel.xcdatamodel; sourceTree = "<group>"; };
+		B5B42C251C931B730005839E /* myData.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = myData.db; path = ../../myData.db; sourceTree = "<group>"; };
+		B5B42C261C931BBC0005839E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		B5B42C281C931FD90005839E /* SelectStudentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectStudentVC.swift; sourceTree = "<group>"; };
+		B5BBEB6E1C96D526006CED97 /* StudentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentCell.swift; sourceTree = "<group>"; };
 		B5F0D3E61C91A76D00B8DF0E /* gifFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = gifFramework.swift; path = ../../../Downloads/gifFramework.swift; sourceTree = "<group>"; };
 		B5F0D3E81C91C92300B8DF0E /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B5F0D3EA1C91F03F00B8DF0E /* FizzyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FizzyVC.swift; sourceTree = "<group>"; };
+		B5FAB49F1C97241500539971 /* Phase2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Phase2-Bridging-Header.h"; sourceTree = "<group>"; };
+		B5FAB4A71C97433D00539971 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = FMDB/FMDatabase.h; sourceTree = "<group>"; };
+		B5FAB4A81C97433D00539971 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = FMDB/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		B5FAB4A91C97433D00539971 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = FMDB/FMResultSet.h; sourceTree = "<group>"; };
+		B5FAB4AA1C97463500539971 /* myData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = myData.sqlite; path = ../../myData.sqlite; sourceTree = "<group>"; };
+		B5FCE1511C96DC7300B3A9D3 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		B5FCE1531C96DC9100B3A9D3 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		B5FCE1551C96DCA000B3A9D3 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		B5FCE15B1C96EEEA00B3A9D3 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		B5FCE15D1C96EFC400B3A9D3 /* StudentInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentInfo.swift; path = ../StudentInfo.swift; sourceTree = "<group>"; };
+		B5FCE15F1C96F05000B3A9D3 /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelManager.swift; path = ../ModelManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5B42C271C931BBC0005839E /* libsqlite3.0.tbd in Frameworks */,
 				B591F5D41C886B46001F2043 /* CoreGraphics.framework in Frameworks */,
 				B591F5D21C886B32001F2043 /* UIKit.framework in Frameworks */,
 			);
@@ -115,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5FAB4A61C9742C300539971 /* libsqlite3.0.tbd in Frameworks */,
 				B583D87D1C870BF900767754 /* Draw.framework in Frameworks */,
 				B50930691C884F2E00D29DAA /* target.framework in Frameworks */,
 				B583D88F1C870C4000767754 /* MyDrawKit.framework in Frameworks */,
@@ -150,11 +173,11 @@
 		B583D82F1C86F28100767754 = {
 			isa = PBXGroup;
 			children = (
-				B5B42C221C92EDFE0005839E /* StudentModel.xcdatamodeld */,
+				B5FAB49F1C97241500539971 /* Phase2-Bridging-Header.h */,
+				B5B42C261C931BBC0005839E /* libsqlite3.0.tbd */,
 				B591F5D31C886B46001F2043 /* CoreGraphics.framework */,
 				B591F5D11C886B32001F2043 /* UIKit.framework */,
 				B583D83A1C86F28100767754 /* Phase2 */,
-				B583D8891C870C4000767754 /* MyDrawKit */,
 				B50930631C884F2E00D29DAA /* target */,
 				B583D8391C86F28100767754 /* Products */,
 			);
@@ -174,19 +197,32 @@
 		B583D83A1C86F28100767754 /* Phase2 */ = {
 			isa = PBXGroup;
 			children = (
+				B5FAB4AA1C97463500539971 /* myData.sqlite */,
 				B583D83B1C86F28100767754 /* AppDelegate.swift */,
 				B583D83D1C86F28100767754 /* ViewController.swift */,
 				B558021A1C905EAB001C5E89 /* RegisterVC.swift */,
 				B5F0D3E81C91C92300B8DF0E /* LoginVC.swift */,
 				B5F0D3EA1C91F03F00B8DF0E /* FizzyVC.swift */,
+				B5B42C281C931FD90005839E /* SelectStudentVC.swift */,
+				B5BBEB6E1C96D526006CED97 /* StudentCell.swift */,
+				B5FCE15D1C96EFC400B3A9D3 /* StudentInfo.swift */,
+				B5FCE15B1C96EEEA00B3A9D3 /* Util.swift */,
+				B5FCE15F1C96F05000B3A9D3 /* ModelManager.swift */,
+				B583D8891C870C4000767754 /* MyDrawKit */,
 				B583D83F1C86F28100767754 /* Main.storyboard */,
 				B583D8451C86F28100767754 /* Assets.xcassets */,
 				B583D8471C86F28100767754 /* LaunchScreen.storyboard */,
 				B583D84A1C86F28100767754 /* Info.plist */,
-				B583D8421C86F28100767754 /* Phase2.xcdatamodeld */,
 				B509305B1C884A4600D29DAA /* DrawLine.swift */,
 				B59C53AD1C92165200BF8A07 /* IntroFinal.gif */,
 				B5F0D3E61C91A76D00B8DF0E /* gifFramework.swift */,
+				B5B42C251C931B730005839E /* myData.db */,
+				B5FCE1511C96DC7300B3A9D3 /* FMDatabase.m */,
+				B5FCE1531C96DC9100B3A9D3 /* FMDatabaseAdditions.m */,
+				B5FCE1551C96DCA000B3A9D3 /* FMResultSet.m */,
+				B5FAB4A71C97433D00539971 /* FMDatabase.h */,
+				B5FAB4A81C97433D00539971 /* FMDatabaseAdditions.h */,
+				B5FAB4A91C97433D00539971 /* FMResultSet.h */,
 			);
 			path = Phase2;
 			sourceTree = "<group>";
@@ -198,7 +234,8 @@
 				B583D88C1C870C4000767754 /* Info.plist */,
 				B583D8941C870D6A00767754 /* MyDrawView.swift */,
 			);
-			path = MyDrawKit;
+			name = MyDrawKit;
+			path = ../MyDrawKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,6 +405,7 @@
 			files = (
 				B59C53AE1C92165200BF8A07 /* IntroFinal.gif in Resources */,
 				B583D8491C86F28100767754 /* LaunchScreen.storyboard in Resources */,
+				B5FAB4AB1C97463500539971 /* myData.sqlite in Resources */,
 				B583D8461C86F28100767754 /* Assets.xcassets in Resources */,
 				B583D8411C86F28100767754 /* Main.storyboard in Resources */,
 			);
@@ -401,15 +439,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B583D83E1C86F28100767754 /* ViewController.swift in Sources */,
-				B5F0D3E71C91A76D00B8DF0E /* gifFramework.swift in Sources */,
-				B5F0D3E91C91C92300B8DF0E /* LoginVC.swift in Sources */,
-				B583D8441C86F28100767754 /* Phase2.xcdatamodeld in Sources */,
-				B5B42C241C92EDFE0005839E /* StudentModel.xcdatamodeld in Sources */,
-				B558021B1C905EAB001C5E89 /* RegisterVC.swift in Sources */,
-				B5F0D3EB1C91F03F00B8DF0E /* FizzyVC.swift in Sources */,
-				B583D83C1C86F28100767754 /* AppDelegate.swift in Sources */,
-				B509305C1C884A4600D29DAA /* DrawLine.swift in Sources */,
+				B5FAB4A01C97339F00539971 /* Util.swift in Sources */,
+				B5FAB49E1C9722E100539971 /* gifFramework.swift in Sources */,
+				B5FAB49D1C97229600539971 /* ModelManager.swift in Sources */,
+				B5FAB49B1C97228F00539971 /* StudentInfo.swift in Sources */,
+				B5FAB49A1C97228C00539971 /* StudentCell.swift in Sources */,
+				B5FAB4991C97228900539971 /* SelectStudentVC.swift in Sources */,
+				B5FAB4981C97228600539971 /* FizzyVC.swift in Sources */,
+				B5FAB4971C97228300539971 /* LoginVC.swift in Sources */,
+				B5FAB4961C97227F00539971 /* RegisterVC.swift in Sources */,
+				B5FAB4951C97227C00539971 /* ViewController.swift in Sources */,
+				B5FAB4941C97227800539971 /* AppDelegate.swift in Sources */,
+				B5FCE1561C96DCA000B3A9D3 /* FMResultSet.m in Sources */,
+				B5FCE1521C96DC7300B3A9D3 /* FMDatabase.m in Sources */,
+				B5FCE1541C96DC9100B3A9D3 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +640,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Phase2/Info.plist;
@@ -604,6 +648,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CA326.Phase2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Phase2/Phase2-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -612,6 +658,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Phase2/Info.plist;
@@ -619,6 +666,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CA326.Phase2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Phase2/Phase2-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -759,29 +807,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		B583D8421C86F28100767754 /* Phase2.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B583D8431C86F28100767754 /* Phase2.xcdatamodel */,
-			);
-			currentVersion = B583D8431C86F28100767754 /* Phase2.xcdatamodel */;
-			path = Phase2.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		B5B42C221C92EDFE0005839E /* StudentModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B5B42C231C92EDFE0005839E /* StudentModel.xcdatamodel */,
-			);
-			currentVersion = B5B42C231C92EDFE0005839E /* StudentModel.xcdatamodel */;
-			path = StudentModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = B583D8301C86F28100767754 /* Project object */;
 }
