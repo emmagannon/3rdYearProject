@@ -10,6 +10,7 @@
 		B50930651C884F2E00D29DAA /* target.h in Headers */ = {isa = PBXBuildFile; fileRef = B50930641C884F2E00D29DAA /* target.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B50930691C884F2E00D29DAA /* target.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50930621C884F2E00D29DAA /* target.framework */; };
 		B509306A1C884F2E00D29DAA /* target.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B50930621C884F2E00D29DAA /* target.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B514C5D11C985DF800480C34 /* Student.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B514C5D01C985DF800480C34 /* Student.sqlite */; };
 		B583D8411C86F28100767754 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B583D83F1C86F28100767754 /* Main.storyboard */; };
 		B583D8461C86F28100767754 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B583D8451C86F28100767754 /* Assets.xcassets */; };
 		B583D8491C86F28100767754 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B583D8471C86F28100767754 /* LaunchScreen.storyboard */; };
@@ -35,7 +36,6 @@
 		B5FAB49E1C9722E100539971 /* gifFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0D3E61C91A76D00B8DF0E /* gifFramework.swift */; };
 		B5FAB4A01C97339F00539971 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE15B1C96EEEA00B3A9D3 /* Util.swift */; };
 		B5FAB4A61C9742C300539971 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B42C261C931BBC0005839E /* libsqlite3.0.tbd */; };
-		B5FAB4AB1C97463500539971 /* myData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B5FAB4AA1C97463500539971 /* myData.sqlite */; };
 		B5FCE1521C96DC7300B3A9D3 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE1511C96DC7300B3A9D3 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B5FCE1541C96DC9100B3A9D3 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE1531C96DC9100B3A9D3 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B5FCE1561C96DCA000B3A9D3 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE1551C96DCA000B3A9D3 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -86,6 +86,7 @@
 		B50930621C884F2E00D29DAA /* target.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = target.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B50930641C884F2E00D29DAA /* target.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = target.h; sourceTree = "<group>"; };
 		B50930661C884F2E00D29DAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B514C5D01C985DF800480C34 /* Student.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = Student.sqlite; path = ../../Student.sqlite; sourceTree = "<group>"; };
 		B558021A1C905EAB001C5E89 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		B583D8381C86F28100767754 /* Phase2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phase2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B583D83B1C86F28100767754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,7 +103,6 @@
 		B591F5D11C886B32001F2043 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B591F5D31C886B46001F2043 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B59C53AD1C92165200BF8A07 /* IntroFinal.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = IntroFinal.gif; path = ../../IntroFinal.gif; sourceTree = "<group>"; };
-		B5B42C251C931B730005839E /* myData.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = myData.db; path = ../../myData.db; sourceTree = "<group>"; };
 		B5B42C261C931BBC0005839E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		B5B42C281C931FD90005839E /* SelectStudentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectStudentVC.swift; sourceTree = "<group>"; };
 		B5BBEB6E1C96D526006CED97 /* StudentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentCell.swift; sourceTree = "<group>"; };
@@ -113,7 +113,6 @@
 		B5FAB4A71C97433D00539971 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = FMDB/FMDatabase.h; sourceTree = "<group>"; };
 		B5FAB4A81C97433D00539971 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = FMDB/FMDatabaseAdditions.h; sourceTree = "<group>"; };
 		B5FAB4A91C97433D00539971 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = FMDB/FMResultSet.h; sourceTree = "<group>"; };
-		B5FAB4AA1C97463500539971 /* myData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = myData.sqlite; path = ../../myData.sqlite; sourceTree = "<group>"; };
 		B5FCE1511C96DC7300B3A9D3 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = fmdb/FMDatabase.m; sourceTree = "<group>"; };
 		B5FCE1531C96DC9100B3A9D3 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
 		B5FCE1551C96DCA000B3A9D3 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = fmdb/FMResultSet.m; sourceTree = "<group>"; };
@@ -197,7 +196,7 @@
 		B583D83A1C86F28100767754 /* Phase2 */ = {
 			isa = PBXGroup;
 			children = (
-				B5FAB4AA1C97463500539971 /* myData.sqlite */,
+				B514C5D01C985DF800480C34 /* Student.sqlite */,
 				B583D83B1C86F28100767754 /* AppDelegate.swift */,
 				B583D83D1C86F28100767754 /* ViewController.swift */,
 				B558021A1C905EAB001C5E89 /* RegisterVC.swift */,
@@ -216,7 +215,6 @@
 				B509305B1C884A4600D29DAA /* DrawLine.swift */,
 				B59C53AD1C92165200BF8A07 /* IntroFinal.gif */,
 				B5F0D3E61C91A76D00B8DF0E /* gifFramework.swift */,
-				B5B42C251C931B730005839E /* myData.db */,
 				B5FCE1511C96DC7300B3A9D3 /* FMDatabase.m */,
 				B5FCE1531C96DC9100B3A9D3 /* FMDatabaseAdditions.m */,
 				B5FCE1551C96DCA000B3A9D3 /* FMResultSet.m */,
@@ -405,7 +403,7 @@
 			files = (
 				B59C53AE1C92165200BF8A07 /* IntroFinal.gif in Resources */,
 				B583D8491C86F28100767754 /* LaunchScreen.storyboard in Resources */,
-				B5FAB4AB1C97463500539971 /* myData.sqlite in Resources */,
+				B514C5D11C985DF800480C34 /* Student.sqlite in Resources */,
 				B583D8461C86F28100767754 /* Assets.xcassets in Resources */,
 				B583D8411C86F28100767754 /* Main.storyboard in Resources */,
 			);

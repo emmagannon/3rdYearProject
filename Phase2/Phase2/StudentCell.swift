@@ -10,9 +10,10 @@ import UIKit
 
 class StudentCell: UITableViewCell {
     
-    //@IBOutlet weak var lblContent: UILabel!
-    @IBOutlet weak var lblContent: UILabel!
 
+    @IBOutlet weak var lblContent: UILabel!
+    @IBOutlet weak var DeleteButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

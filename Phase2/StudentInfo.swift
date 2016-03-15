@@ -11,9 +11,12 @@ import UIKit
 
 class StudentInfo: NSObject
 {
-    var name: String = String()
-    //var date: String = String()
-    //var marks: String = String()
+    var Name: String = String()
+    var RollNo: String = String()
+    
+    // not currently used
+    var date: String = String()
+    var marks: String = String()
     
     
 }

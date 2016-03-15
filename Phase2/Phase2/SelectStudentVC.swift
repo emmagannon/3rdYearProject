@@ -8,18 +8,24 @@
 
 import UIKit
 
-class SelectStudentVC: UIViewController, UITableViewDataSource,UITableViewDelegate {
-    
+class SelectStudentVC: UIViewController, UITableViewDataSource,UITableViewDelegate
+{    
     var marrStudentData : NSMutableArray!
     
     @IBOutlet weak var tbStudentData: UITableView!
     @IBOutlet weak var studentNameTextField: UITextField!
+    var isEdit : Bool = false
     var studentData : StudentInfo!
     
    
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        if(isEdit)
+        {
+            studentNameTextField.text = studentData.Name;
+            //txtMarks.text = studentData.Marks;
+        }
+
 
         // Do any additional setup after loading the view.
     }
@@ -47,14 +53,26 @@ class SelectStudentVC: UIViewController, UITableViewDataSource,UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:StudentCell = tableView.dequeueReusableCellWithIdentifier("cell") as! StudentCell
         let student:StudentInfo = marrStudentData.objectAtIndex(indexPath.row) as! StudentInfo
-        cell.lblContent.text = "Name : \(student.name)"
-        //cell.btnDelete.tag = indexPath.row
+        cell.lblContent.text = "Name : \(student.Name)  \n  Marks :"
+        cell.DeleteButton.tag = indexPath.row
         //cell.btnEdit.tag = indexPath.row
         return cell
     }
     
   
 
+    @IBAction func DeleteButtonTapped(sender: UIButton) {
+        let DeleteButton : UIButton = sender as! UIButton
+        let selectedIndex : Int = DeleteButton.tag
+        let studentInfo: StudentInfo = marrStudentData.objectAtIndex(selectedIndex) as! StudentInfo
+        let isDeleted = ModelManager.getInstance().deleteStudentData(studentInfo)
+        if isDeleted {
+            Util.invokeAlertMethod("", strBody: "Record deleted successfully.", delegate: nil)
+        } else {
+            Util.invokeAlertMethod("", strBody: "Error in deleting record.", delegate: nil)
+        }
+        self.getStudentData()
+    }
 
     @IBAction func AddNameButtonTapped(sender: UIButton)
     {
@@ -62,25 +80,25 @@ class SelectStudentVC: UIViewController, UITableViewDataSource,UITableViewDelega
         {
             Util.invokeAlertMethod("", strBody: "Please enter student name.", delegate: nil)
         }
-        /*else
+        else
         {
             if(isEdit)
             {
                 let studentInfo: StudentInfo = StudentInfo()
                 studentInfo.RollNo = studentData.RollNo
-                studentInfo.Name = txtName.text!
-                studentInfo.Marks = txtMarks.text!
+                studentInfo.Name = studentNameTextField.text!
+                //studentInfo.Marks = txtMarks.text!
                 let isUpdated = ModelManager.getInstance().updateStudentData(studentInfo)
                 if isUpdated {
                     Util.invokeAlertMethod("", strBody: "Record updated successfully.", delegate: nil)
                 } else {
                     Util.invokeAlertMethod("", strBody: "Error in updating record.", delegate: nil)
                 }
-            }*/
+            }
             else
             {
                 let studentInfo: StudentInfo = StudentInfo()
-                studentInfo.name = studentNameTextField.text!
+                studentInfo.Name = studentNameTextField.text!
                 //studentInfo.Marks = txtMarks.text!
                 let isInserted = ModelManager.getInstance().addStudentData(studentInfo)
                 if isInserted {
@@ -90,6 +108,7 @@ class SelectStudentVC: UIViewController, UITableViewDataSource,UITableViewDelega
                 }
             }
             self.navigationController?.popViewControllerAnimated(true)
+            self.getStudentData()
         }
 }
-
+}

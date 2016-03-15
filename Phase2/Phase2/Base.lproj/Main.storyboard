@@ -112,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1527" y="325.5"/>
+            <point key="canvasLocation" x="1488" y="325.5"/>
         </scene>
         <!--RegisterVC-->
         <scene sceneID="pgk-5n-DMm">
@@ -232,10 +232,10 @@
             </objects>
             <point key="canvasLocation" x="1488" y="999"/>
         </scene>
-        <!--Select StudentVC-->
+        <!--Student Select-->
         <scene sceneID="MZD-Sd-XRF">
             <objects>
-                <viewController id="5T9-I2-HiF" customClass="SelectStudentVC" customModule="Phase2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Student Select" id="5T9-I2-HiF" customClass="SelectStudentVC" customModule="Phase2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f3o-LK-JWJ"/>
                         <viewControllerLayoutGuide type="bottom" id="ZWd-Lk-LPg"/>
@@ -253,51 +253,6 @@
                                     <rect key="frame" x="20" y="43" width="242" height="57"/>
                                 </variation>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="in7-kX-y3T">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="a" id="XJu-pk-Tra" customClass="StudentCell" customModule="Phase2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XJu-pk-Tra" id="fWP-6N-Scw">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Y2-Cu-QMh">
-                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                                        <rect key="frame" x="16" y="11" width="216" height="21"/>
-                                                    </variation>
-                                                </label>
-                                            </subviews>
-                                            <variation key="default">
-                                                <mask key="subviews">
-                                                    <exclude reference="9Y2-Cu-QMh"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=regular">
-                                                <mask key="subviews">
-                                                    <include reference="9Y2-Cu-QMh"/>
-                                                </mask>
-                                            </variation>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="lblContent" destination="9Y2-Cu-QMh" id="2Y8-Zx-Sjc"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="108" width="800" height="588"/>
-                                </variation>
-                                <connections>
-                                    <outlet property="dataSource" destination="6Nc-nA-4hR" id="F7L-jD-d5s"/>
-                                    <outlet property="delegate" destination="6Nc-nA-4hR" id="WWr-ND-tsg"/>
-                                </connections>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9T-te-daH">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.048870686410000003" green="0.75521515049999999" blue="0.43013878579999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -329,35 +284,113 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name:" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="k6E-Mh-6TK">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="20" y="712" width="195" height="30"/>
                                 </variation>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="in7-kX-y3T">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="XJu-pk-Tra" customClass="StudentCell" customModule="Phase2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XJu-pk-Tra" id="fWP-6N-Scw">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Y2-Cu-QMh">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                                        <rect key="frame" x="16" y="11" width="216" height="21"/>
+                                                    </variation>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAs-K1-dfi">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <state key="normal" title="Delete">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                                        <rect key="frame" x="687" y="-8" width="86" height="51.5"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="DeleteButtonTapped:" destination="5T9-I2-HiF" eventType="touchUpInside" id="A0I-ca-ujL"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="9Y2-Cu-QMh"/>
+                                                    <exclude reference="pAs-K1-dfi"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <mask key="subviews">
+                                                    <include reference="9Y2-Cu-QMh"/>
+                                                    <include reference="pAs-K1-dfi"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="DeleteButton" destination="pAs-K1-dfi" id="YTk-AI-VXl"/>
+                                            <outlet property="lblContent" destination="9Y2-Cu-QMh" id="2Y8-Zx-Sjc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="108" width="800" height="588"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="5T9-I2-HiF" id="v8S-PN-cOU"/>
+                                    <outlet property="delegate" destination="5T9-I2-HiF" id="pbq-W4-3yR"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeT-9B-n2I">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="688" y="51" width="81" height="42"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="2le-Sm-aHZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12761093039999999" green="0.8187880622" blue="0.85387352750000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="tUK-nJ-URD"/>
-                                <exclude reference="in7-kX-y3T"/>
                                 <exclude reference="d9T-te-daH"/>
                                 <exclude reference="d1J-eK-Ci5"/>
                                 <exclude reference="k6E-Mh-6TK"/>
+                                <exclude reference="in7-kX-y3T"/>
+                                <exclude reference="KeT-9B-n2I"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
                                 <include reference="tUK-nJ-URD"/>
-                                <include reference="in7-kX-y3T"/>
                                 <include reference="d9T-te-daH"/>
                                 <include reference="d1J-eK-Ci5"/>
                                 <include reference="k6E-Mh-6TK"/>
+                                <include reference="in7-kX-y3T"/>
+                                <include reference="KeT-9B-n2I"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="studentNameTextField" destination="k6E-Mh-6TK" id="gJC-Ae-7cV"/>
-                        <outlet property="tbStudentData" destination="in7-kX-y3T" id="Rzw-Bm-CHK"/>
+                        <outlet property="tbStudentData" destination="in7-kX-y3T" id="Ush-Bd-bds"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Kf-ry-K2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -387,7 +420,7 @@
                                     <rect key="frame" x="69" y="644" width="82" height="59"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="5T9-I2-HiF" kind="showDetail" id="SCh-WM-qDz"/>
+                                    <segue destination="5T9-I2-HiF" kind="showDetail" id="HXW-Cg-Gfk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvg-Lj-b0D">
@@ -447,7 +480,7 @@
                                     <rect key="frame" x="42" y="678" width="82" height="59"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="5T9-I2-HiF" kind="showDetail" id="bz3-lk-O57"/>
+                                    <segue destination="5T9-I2-HiF" kind="presentation" id="let-NF-2fw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="n" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8Q-ax-DhJ">
@@ -490,6 +523,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bz3-lk-O57"/>
+        <segue reference="gMp-gc-3Ct"/>
+        <segue reference="2le-Sm-aHZ"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -22,7 +22,7 @@ class ModelManager: NSObject
     {
         if(sharedInstance.database == nil)
         {
-            sharedInstance.database = FMDatabase(path: Util.getPath("myData.sqlite"))
+            sharedInstance.database = FMDatabase(path: Util.getPath("Student.sqlite"))
         }
         return sharedInstance
     }
@@ -30,9 +30,23 @@ class ModelManager: NSObject
     func addStudentData(studentInfo: StudentInfo) -> Bool
     {
         sharedInstance.database!.open()
-        let isInserted = sharedInstance.database!.executeUpdate("INSERT INTO student_info (Name) VALUES (?)", withArgumentsInArray: [studentInfo.name])
+        let isInserted = sharedInstance.database!.executeUpdate("INSERT INTO student_info (Name) VALUES (?)", withArgumentsInArray: [studentInfo.Name])
         sharedInstance.database!.close()
         return isInserted
+    }
+    
+    func updateStudentData(studentInfo: StudentInfo) -> Bool {
+        sharedInstance.database!.open()
+        let isUpdated = sharedInstance.database!.executeUpdate("UPDATE student_info SET Name=? WHERE RollNo=?", withArgumentsInArray: [studentInfo.Name, studentInfo.RollNo])
+        sharedInstance.database!.close()
+        return isUpdated
+    }
+    
+    func deleteStudentData(studentInfo: StudentInfo) -> Bool {
+        sharedInstance.database!.open()
+        let isDeleted = sharedInstance.database!.executeUpdate("DELETE FROM student_info WHERE RollNo=?", withArgumentsInArray: [studentInfo.RollNo])
+        sharedInstance.database!.close()
+        return isDeleted
     }
     
     func getAllStudentData() -> NSMutableArray {
@@ -42,7 +56,8 @@ class ModelManager: NSObject
         if (resultSet != nil) {
             while resultSet.next() {
                 let studentInfo : StudentInfo = StudentInfo()
-                studentInfo.name = resultSet.stringForColumn("Name")
+                studentInfo.RollNo = resultSet.stringForColumn("RollNo")
+                studentInfo.Name = resultSet.stringForColumn("Name")
                 marrStudentInfo.addObject(studentInfo)
             }
         }
