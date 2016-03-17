@@ -19,21 +19,33 @@ class SelectStudentVC: UIViewController, UITableViewDataSource,UITableViewDelega
     
    
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
         if(isEdit)
         {
             studentNameTextField.text = studentData.Name;
             //txtMarks.text = studentData.Marks;
         }
 
-
         // Do any additional setup after loading the view.
+        
     }
     
     override func viewWillAppear(animated: Bool) {
         self.getStudentData()
     }
-
+    
+    func keyboardWillShow(sender: NSNotification) {
+        self.view.frame.origin.y -= 150
+    }
+    func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y += 150
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

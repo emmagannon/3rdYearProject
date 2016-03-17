@@ -7,13 +7,52 @@
 //
 // bottom of N: 339.0, 482.0
 
+import Foundation
 import UIKit
-import SpriteKit
 
 class DrawLine: UIView {
 
+    var pointsToDraw:[Int] = []
+    {
+        didSet
+        {
+            self.setNeedsDisplay()
+        }
+    }
     
-    var lines =  [CGPoint]()
+    required init(coder aDecoder: NSCoder)
+    {
+        super.init(coder: aDecoder)!
+        self.backgroundColor = UIColor.clearColor()
+    }
+    
+    override func drawRect(rect: CGRect) {
+        
+        
+        let context = UIGraphicsGetCurrentContext();
+        CGContextClearRect(context, self.bounds);
+        CGContextSetLineWidth(context, 10.0);
+        UIColor.blackColor().set()
+        
+        
+        if pointsToDraw.count > 4 {
+            
+            CGContextMoveToPoint(context, CGFloat(pointsToDraw[0]), CGFloat(pointsToDraw[1]))
+            
+            for i in 2..<pointsToDraw.count {
+                if i % 2 <= 0 {
+                    CGContextAddLineToPoint(context, CGFloat(pointsToDraw[i]), CGFloat(pointsToDraw[i + 1]))
+                }
+            }
+        }
+        
+        // Draw
+        CGContextStrokePath(context);
+    }
+
+
+    
+    /*var lines =  [CGPoint]()
     var drawImage: UIImage?
     let path = UIBezierPath()
     var shouldClear = false
@@ -133,6 +172,6 @@ class DrawLine: UIView {
             print("correct position")
         }
         */
-    }
+    }*/
     
 }

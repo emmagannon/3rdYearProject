@@ -11,6 +11,10 @@
 		B50930691C884F2E00D29DAA /* target.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50930621C884F2E00D29DAA /* target.framework */; };
 		B509306A1C884F2E00D29DAA /* target.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B50930621C884F2E00D29DAA /* target.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B514C5D11C985DF800480C34 /* Student.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B514C5D01C985DF800480C34 /* Student.sqlite */; };
+		B514C5DA1C98A1DF00480C34 /* WritingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514C5D91C98A1DF00480C34 /* WritingVC.swift */; };
+		B514C5DE1C98A42800480C34 /* PathRecogniser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514C5DD1C98A42800480C34 /* PathRecogniser.swift */; };
+		B514C5DF1C98AAD300480C34 /* DrawLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509305B1C884A4600D29DAA /* DrawLine.swift */; };
+		B56B725B1C9AC7BB0083D439 /* IntroFinal.gif in Resources */ = {isa = PBXBuildFile; fileRef = B56B725A1C9AC7BB0083D439 /* IntroFinal.gif */; };
 		B583D8411C86F28100767754 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B583D83F1C86F28100767754 /* Main.storyboard */; };
 		B583D8461C86F28100767754 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B583D8451C86F28100767754 /* Assets.xcassets */; };
 		B583D8491C86F28100767754 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B583D8471C86F28100767754 /* LaunchScreen.storyboard */; };
@@ -22,7 +26,6 @@
 		B583D8951C870D6A00767754 /* MyDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583D8941C870D6A00767754 /* MyDrawView.swift */; };
 		B591F5D21C886B32001F2043 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B591F5D11C886B32001F2043 /* UIKit.framework */; };
 		B591F5D41C886B46001F2043 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B591F5D31C886B46001F2043 /* CoreGraphics.framework */; };
-		B59C53AE1C92165200BF8A07 /* IntroFinal.gif in Resources */ = {isa = PBXBuildFile; fileRef = B59C53AD1C92165200BF8A07 /* IntroFinal.gif */; };
 		B5B42C271C931BBC0005839E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B42C261C931BBC0005839E /* libsqlite3.0.tbd */; };
 		B5FAB4941C97227800539971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583D83B1C86F28100767754 /* AppDelegate.swift */; };
 		B5FAB4951C97227C00539971 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583D83D1C86F28100767754 /* ViewController.swift */; };
@@ -87,14 +90,17 @@
 		B50930641C884F2E00D29DAA /* target.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = target.h; sourceTree = "<group>"; };
 		B50930661C884F2E00D29DAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B514C5D01C985DF800480C34 /* Student.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = Student.sqlite; path = ../../Student.sqlite; sourceTree = "<group>"; };
+		B514C5D91C98A1DF00480C34 /* WritingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingVC.swift; sourceTree = "<group>"; };
+		B514C5DD1C98A42800480C34 /* PathRecogniser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathRecogniser.swift; sourceTree = "<group>"; };
 		B558021A1C905EAB001C5E89 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		B56B725A1C9AC7BB0083D439 /* IntroFinal.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = IntroFinal.gif; path = ../../IntroFinal.gif; sourceTree = "<group>"; };
 		B583D8381C86F28100767754 /* Phase2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phase2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B583D83B1C86F28100767754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B583D83D1C86F28100767754 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B583D8401C86F28100767754 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B583D8451C86F28100767754 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B583D8481C86F28100767754 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B583D84A1C86F28100767754 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B583D84A1C86F28100767754 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Phase2/Info.plist; sourceTree = "<group>"; };
 		B583D8761C870BF900767754 /* Draw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Draw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B583D8881C870C4000767754 /* MyDrawKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyDrawKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B583D88A1C870C4000767754 /* MyDrawKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDrawKit.h; sourceTree = "<group>"; };
@@ -102,7 +108,6 @@
 		B583D8941C870D6A00767754 /* MyDrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDrawView.swift; sourceTree = "<group>"; };
 		B591F5D11C886B32001F2043 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B591F5D31C886B46001F2043 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B59C53AD1C92165200BF8A07 /* IntroFinal.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = IntroFinal.gif; path = ../../IntroFinal.gif; sourceTree = "<group>"; };
 		B5B42C261C931BBC0005839E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		B5B42C281C931FD90005839E /* SelectStudentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectStudentVC.swift; sourceTree = "<group>"; };
 		B5BBEB6E1C96D526006CED97 /* StudentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentCell.swift; sourceTree = "<group>"; };
@@ -110,13 +115,13 @@
 		B5F0D3E81C91C92300B8DF0E /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B5F0D3EA1C91F03F00B8DF0E /* FizzyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FizzyVC.swift; sourceTree = "<group>"; };
 		B5FAB49F1C97241500539971 /* Phase2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Phase2-Bridging-Header.h"; sourceTree = "<group>"; };
-		B5FAB4A71C97433D00539971 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = FMDB/FMDatabase.h; sourceTree = "<group>"; };
-		B5FAB4A81C97433D00539971 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = FMDB/FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		B5FAB4A91C97433D00539971 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = FMDB/FMResultSet.h; sourceTree = "<group>"; };
-		B5FCE1511C96DC7300B3A9D3 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = fmdb/FMDatabase.m; sourceTree = "<group>"; };
-		B5FCE1531C96DC9100B3A9D3 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		B5FCE1551C96DCA000B3A9D3 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = fmdb/FMResultSet.m; sourceTree = "<group>"; };
-		B5FCE15B1C96EEEA00B3A9D3 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		B5FAB4A71C97433D00539971 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = ../Phase2/FMDB/FMDatabase.h; sourceTree = "<group>"; };
+		B5FAB4A81C97433D00539971 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = ../Phase2/FMDB/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		B5FAB4A91C97433D00539971 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = ../Phase2/FMDB/FMResultSet.h; sourceTree = "<group>"; };
+		B5FCE1511C96DC7300B3A9D3 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = ../Phase2/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		B5FCE1531C96DC9100B3A9D3 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = ../Phase2/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		B5FCE1551C96DCA000B3A9D3 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = ../Phase2/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		B5FCE15B1C96EEEA00B3A9D3 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Util.swift; path = Phase2/Util.swift; sourceTree = "<group>"; };
 		B5FCE15D1C96EFC400B3A9D3 /* StudentInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentInfo.swift; path = ../StudentInfo.swift; sourceTree = "<group>"; };
 		B5FCE15F1C96F05000B3A9D3 /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelManager.swift; path = ../ModelManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +174,61 @@
 			path = target;
 			sourceTree = "<group>";
 		};
+		B514C5D21C98A05100480C34 /* Login/Register */ = {
+			isa = PBXGroup;
+			children = (
+				B5F0D3E81C91C92300B8DF0E /* LoginVC.swift */,
+				B558021A1C905EAB001C5E89 /* RegisterVC.swift */,
+			);
+			name = Login/Register;
+			sourceTree = "<group>";
+		};
+		B514C5D31C98A07B00480C34 /* StudentDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				B5B42C281C931FD90005839E /* SelectStudentVC.swift */,
+				B5FCE15F1C96F05000B3A9D3 /* ModelManager.swift */,
+				B5FCE15D1C96EFC400B3A9D3 /* StudentInfo.swift */,
+				B5BBEB6E1C96D526006CED97 /* StudentCell.swift */,
+				B514C5D01C985DF800480C34 /* Student.sqlite */,
+			);
+			name = StudentDatabase;
+			sourceTree = "<group>";
+		};
+		B514C5D61C98A10900480C34 /* Fizzy */ = {
+			isa = PBXGroup;
+			children = (
+				B5F0D3EA1C91F03F00B8DF0E /* FizzyVC.swift */,
+				B5F0D3E61C91A76D00B8DF0E /* gifFramework.swift */,
+				B56B725A1C9AC7BB0083D439 /* IntroFinal.gif */,
+			);
+			name = Fizzy;
+			sourceTree = "<group>";
+		};
+		B514C5D71C98A14800480C34 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				B5FCE1511C96DC7300B3A9D3 /* FMDatabase.m */,
+				B5FCE1531C96DC9100B3A9D3 /* FMDatabaseAdditions.m */,
+				B5FCE1551C96DCA000B3A9D3 /* FMResultSet.m */,
+				B5FAB4A71C97433D00539971 /* FMDatabase.h */,
+				B5FAB4A81C97433D00539971 /* FMDatabaseAdditions.h */,
+				B5FAB4A91C97433D00539971 /* FMResultSet.h */,
+			);
+			name = FMDB;
+			path = ../target;
+			sourceTree = "<group>";
+		};
+		B514C5D81C98A17300480C34 /* Writing */ = {
+			isa = PBXGroup;
+			children = (
+				B514C5D91C98A1DF00480C34 /* WritingVC.swift */,
+				B509305B1C884A4600D29DAA /* DrawLine.swift */,
+				B514C5DD1C98A42800480C34 /* PathRecogniser.swift */,
+			);
+			name = Writing;
+			sourceTree = "<group>";
+		};
 		B583D82F1C86F28100767754 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +237,8 @@
 				B591F5D31C886B46001F2043 /* CoreGraphics.framework */,
 				B591F5D11C886B32001F2043 /* UIKit.framework */,
 				B583D83A1C86F28100767754 /* Phase2 */,
+				B5FCE15B1C96EEEA00B3A9D3 /* Util.swift */,
+				B583D84A1C86F28100767754 /* Info.plist */,
 				B50930631C884F2E00D29DAA /* target */,
 				B583D8391C86F28100767754 /* Products */,
 			);
@@ -196,31 +258,17 @@
 		B583D83A1C86F28100767754 /* Phase2 */ = {
 			isa = PBXGroup;
 			children = (
-				B514C5D01C985DF800480C34 /* Student.sqlite */,
-				B583D83B1C86F28100767754 /* AppDelegate.swift */,
-				B583D83D1C86F28100767754 /* ViewController.swift */,
-				B558021A1C905EAB001C5E89 /* RegisterVC.swift */,
-				B5F0D3E81C91C92300B8DF0E /* LoginVC.swift */,
-				B5F0D3EA1C91F03F00B8DF0E /* FizzyVC.swift */,
-				B5B42C281C931FD90005839E /* SelectStudentVC.swift */,
-				B5BBEB6E1C96D526006CED97 /* StudentCell.swift */,
-				B5FCE15D1C96EFC400B3A9D3 /* StudentInfo.swift */,
-				B5FCE15B1C96EEEA00B3A9D3 /* Util.swift */,
-				B5FCE15F1C96F05000B3A9D3 /* ModelManager.swift */,
-				B583D8891C870C4000767754 /* MyDrawKit */,
-				B583D83F1C86F28100767754 /* Main.storyboard */,
 				B583D8451C86F28100767754 /* Assets.xcassets */,
 				B583D8471C86F28100767754 /* LaunchScreen.storyboard */,
-				B583D84A1C86F28100767754 /* Info.plist */,
-				B509305B1C884A4600D29DAA /* DrawLine.swift */,
-				B59C53AD1C92165200BF8A07 /* IntroFinal.gif */,
-				B5F0D3E61C91A76D00B8DF0E /* gifFramework.swift */,
-				B5FCE1511C96DC7300B3A9D3 /* FMDatabase.m */,
-				B5FCE1531C96DC9100B3A9D3 /* FMDatabaseAdditions.m */,
-				B5FCE1551C96DCA000B3A9D3 /* FMResultSet.m */,
-				B5FAB4A71C97433D00539971 /* FMDatabase.h */,
-				B5FAB4A81C97433D00539971 /* FMDatabaseAdditions.h */,
-				B5FAB4A91C97433D00539971 /* FMResultSet.h */,
+				B583D83F1C86F28100767754 /* Main.storyboard */,
+				B583D83B1C86F28100767754 /* AppDelegate.swift */,
+				B583D83D1C86F28100767754 /* ViewController.swift */,
+				B514C5D21C98A05100480C34 /* Login/Register */,
+				B514C5D31C98A07B00480C34 /* StudentDatabase */,
+				B514C5D61C98A10900480C34 /* Fizzy */,
+				B514C5D81C98A17300480C34 /* Writing */,
+				B583D8891C870C4000767754 /* MyDrawKit */,
+				B514C5D71C98A14800480C34 /* FMDB */,
 			);
 			path = Phase2;
 			sourceTree = "<group>";
@@ -401,10 +449,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B59C53AE1C92165200BF8A07 /* IntroFinal.gif in Resources */,
 				B583D8491C86F28100767754 /* LaunchScreen.storyboard in Resources */,
 				B514C5D11C985DF800480C34 /* Student.sqlite in Resources */,
 				B583D8461C86F28100767754 /* Assets.xcassets in Resources */,
+				B56B725B1C9AC7BB0083D439 /* IntroFinal.gif in Resources */,
 				B583D8411C86F28100767754 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,9 +494,12 @@
 				B5FAB4981C97228600539971 /* FizzyVC.swift in Sources */,
 				B5FAB4971C97228300539971 /* LoginVC.swift in Sources */,
 				B5FAB4961C97227F00539971 /* RegisterVC.swift in Sources */,
+				B514C5DA1C98A1DF00480C34 /* WritingVC.swift in Sources */,
 				B5FAB4951C97227C00539971 /* ViewController.swift in Sources */,
 				B5FAB4941C97227800539971 /* AppDelegate.swift in Sources */,
 				B5FCE1561C96DCA000B3A9D3 /* FMResultSet.m in Sources */,
+				B514C5DE1C98A42800480C34 /* PathRecogniser.swift in Sources */,
+				B514C5DF1C98AAD300480C34 /* DrawLine.swift in Sources */,
 				B5FCE1521C96DC7300B3A9D3 /* FMDatabase.m in Sources */,
 				B5FCE1541C96DC9100B3A9D3 /* FMDatabaseAdditions.m in Sources */,
 			);
