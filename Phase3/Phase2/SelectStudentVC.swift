@@ -79,7 +79,7 @@ class SelectStudentVC: UIViewController, UITableViewDataSource,UITableViewDelega
         let studentInfo: StudentInfo = marrStudentData.objectAtIndex(selectedIndex) as! StudentInfo
         let isDeleted = ModelManager.getInstance().deleteStudentData(studentInfo)
         if isDeleted {
-            Util.invokeAlertMethod("", strBody: "Record deleted successfully.", delegate: nil)
+            Util.invokeAlertMethod("", strBody: "Student record deleted successfully.", delegate: nil)
         } else {
             Util.invokeAlertMethod("", strBody: "Error in deleting record.", delegate: nil)
         }
@@ -100,12 +100,12 @@ class SelectStudentVC: UIViewController, UITableViewDataSource,UITableViewDelega
                 studentInfo.RollNo = studentData.RollNo
                 studentInfo.Name = studentNameTextField.text!
                 //studentInfo.Marks = txtMarks.text!
-                let isUpdated = ModelManager.getInstance().updateStudentData(studentInfo)
-                if isUpdated {
-                    Util.invokeAlertMethod("", strBody: "Record updated successfully.", delegate: nil)
-                } else {
-                    Util.invokeAlertMethod("", strBody: "Error in updating record.", delegate: nil)
-                }
+                //let isUpdated = ModelManager.getInstance().updateStudentData(studentInfo)
+                //if isUpdated {
+                //    Util.invokeAlertMethod("", strBody: "Student record updated successfully.", delegate: nil)
+                //} else {
+                //    Util.invokeAlertMethod("", strBody: "Error in updating record.", delegate: nil)
+                //}
             }
             else
             {
@@ -114,9 +114,9 @@ class SelectStudentVC: UIViewController, UITableViewDataSource,UITableViewDelega
                 //studentInfo.Marks = txtMarks.text!
                 let isInserted = ModelManager.getInstance().addStudentData(studentInfo)
                 if isInserted {
-                    Util.invokeAlertMethod("", strBody: "Record Inserted successfully.", delegate: nil)
+                    Util.invokeAlertMethod("", strBody: "Student record added successfully.", delegate: nil)
                 } else {
-                    Util.invokeAlertMethod("", strBody: "Error in inserting record.", delegate: nil)
+                    Util.invokeAlertMethod("", strBody: "Error in adding student record.", delegate: nil)
                 }
             }
             self.navigationController?.popViewControllerAnimated(true)

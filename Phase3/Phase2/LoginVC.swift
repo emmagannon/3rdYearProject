@@ -50,29 +50,29 @@ class LoginVC: UIViewController {
         // check for empty fields
         if(username!.isEmpty || password!.isEmpty)
         {
-            // display alert message
-            displayMyAlertMessage("All Fields are required");
+            // display error message
+            displayMyErrorMessage("All Fields are required");
             return;
         }
         
         // check if the details entered match the stored ones
         if(username != usernameStored || password != passwordStored)
         {
-            displayMyAlertMessage("Incorrect information");
+            displayMyErrorMessage("Incorrect information");
         }
     }
 
 
-    func displayMyAlertMessage(userMessage:String)
+    func displayMyErrorMessage(userMessage:String)
     {
         
-        var myAlert = UIAlertController(title:"Error", message:userMessage, preferredStyle: UIAlertControllerStyle.Alert);
+        var myError = UIAlertController(title:"Error", message:userMessage, preferredStyle: UIAlertControllerStyle.Alert);
         
         let okAction = UIAlertAction(title:"OK", style:UIAlertActionStyle.Default, handler:nil);
         
-        myAlert.addAction(okAction);
+        myError.addAction(okAction);
         
-        self.presentViewController(myAlert, animated:true, completion:nil)
+        self.presentViewController(myError, animated:true, completion:nil)
         
     }
 

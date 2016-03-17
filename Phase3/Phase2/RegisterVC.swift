@@ -38,7 +38,7 @@ class RegisterVC: UIViewController {
         {
             
             // display alert message
-            displayMyAlertMessage("All Fields are required");
+            displayMyErrorMessage("All Fields are required");
             return;
         }
         
@@ -46,7 +46,7 @@ class RegisterVC: UIViewController {
         if(password != confirmPassword)
         {
             //display alert message
-            displayMyAlertMessage("Passwords do not match");
+            displayMyErrorMessage("Passwords do not match");
             return;
             
         }
@@ -61,7 +61,7 @@ class RegisterVC: UIViewController {
         
         // display confirmation message
         
-        var myAlert = UIAlertController(title:"Error", message:"Registration Sucessful", preferredStyle: UIAlertControllerStyle.Alert);
+        var myError = UIAlertController(title:"Error", message:"Registration Sucessful", preferredStyle: UIAlertControllerStyle.Alert);
         
         let okAction = UIAlertAction(title:"OK", style:UIAlertActionStyle.Default)
         {
@@ -69,21 +69,21 @@ class RegisterVC: UIViewController {
             self.dismissViewControllerAnimated(true, completion:nil)
         }
         
-        myAlert.addAction(okAction);
-        self.presentViewController(myAlert, animated:true, completion:nil)
+        myError.addAction(okAction);
+        self.presentViewController(myError, animated:true, completion:nil)
         
     }
     
-    func displayMyAlertMessage(userMessage:String)
+    func displayMyErrorMessage(userMessage:String)
     {
         
-        var myAlert = UIAlertController(title:"Alert", message:userMessage, preferredStyle: UIAlertControllerStyle.Alert);
+        var myError = UIAlertController(title:"Error", message:userMessage, preferredStyle: UIAlertControllerStyle.Alert);
         
         let okAction = UIAlertAction(title:"OK", style:UIAlertActionStyle.Default, handler:nil);
         
-        myAlert.addAction(okAction);
+        myError.addAction(okAction);
         
-        self.presentViewController(myAlert, animated:true, completion:nil)
+        self.presentViewController(myError, animated:true, completion:nil)
         
     }
 
