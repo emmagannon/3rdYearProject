@@ -596,27 +596,17 @@
                                     <segue destination="paX-Fu-ai9" kind="show" identifier="nScore" id="cTR-3O-Ajk"/>
                                 </connections>
                             </button>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="w-n" translatesAutoresizingMaskIntoConstraints="NO" id="qGV-Yl-t31">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="192" y="195" width="415" height="411"/>
+                                </variation>
+                            </imageView>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUA-oZ-2Bs" customClass="RenderView" customModule="LetterWritingCheck" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="w-n" translatesAutoresizingMaskIntoConstraints="NO" id="qGV-Yl-t31">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="193" y="126" width="415" height="411"/>
-                                        </variation>
-                                    </imageView>
-                                </subviews>
                                 <gestureRecognizers/>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="qGV-Yl-t31"/>
-                                    </mask>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="800" height="664"/>
-                                    <mask key="subviews">
-                                        <include reference="qGV-Yl-t31"/>
-                                    </mask>
                                 </variation>
                             </view>
                         </subviews>
@@ -625,6 +615,7 @@
                             <mask key="subviews">
                                 <exclude reference="oC7-Fx-y6P"/>
                                 <exclude reference="t0z-gQ-I44"/>
+                                <exclude reference="qGV-Yl-t31"/>
                                 <exclude reference="KUA-oZ-2Bs"/>
                             </mask>
                         </variation>
@@ -632,6 +623,7 @@
                             <mask key="subviews">
                                 <include reference="oC7-Fx-y6P"/>
                                 <include reference="t0z-gQ-I44"/>
+                                <include reference="qGV-Yl-t31"/>
                                 <include reference="KUA-oZ-2Bs"/>
                             </mask>
                         </variation>
@@ -671,29 +663,12 @@
                                     <segue destination="paX-Fu-ai9" kind="show" identifier="sScore" id="KkE-8m-stP"/>
                                 </connections>
                             </button>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ymu-Oq-gny" customClass="RenderView" customModule="LetterWritingCheck" customModuleProvider="target">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="w-s" translatesAutoresizingMaskIntoConstraints="NO" id="b7h-qq-f9U">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="w-s" translatesAutoresizingMaskIntoConstraints="NO" id="b7h-qq-f9U">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="193" y="121" width="415" height="411"/>
-                                        </variation>
-                                    </imageView>
-                                </subviews>
-                                <gestureRecognizers/>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="b7h-qq-f9U"/>
-                                    </mask>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="800" height="654"/>
-                                    <mask key="subviews">
-                                        <include reference="b7h-qq-f9U"/>
-                                    </mask>
+                                    <rect key="frame" x="192" y="195" width="415" height="411"/>
                                 </variation>
-                            </view>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWY-X0-xOD">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.75521515049999999" green="0.0798666918" blue="0.13758823689999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -712,20 +687,29 @@
                                     <segue destination="IOt-iK-j4C" kind="show" id="LBA-2A-zAB"/>
                                 </connections>
                             </button>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ymu-Oq-gny" customClass="RenderView" customModule="LetterWritingCheck" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="654"/>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.12761093039999999" green="0.8187880622" blue="0.85387352750000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="fvI-Ru-ZK0"/>
-                                <exclude reference="Ymu-Oq-gny"/>
+                                <exclude reference="b7h-qq-f9U"/>
                                 <exclude reference="IWY-X0-xOD"/>
+                                <exclude reference="Ymu-Oq-gny"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
                                 <include reference="fvI-Ru-ZK0"/>
-                                <include reference="Ymu-Oq-gny"/>
+                                <include reference="b7h-qq-f9U"/>
                                 <include reference="IWY-X0-xOD"/>
+                                <include reference="Ymu-Oq-gny"/>
                             </mask>
                         </variation>
                     </view>
@@ -861,29 +845,12 @@
                                     <segue destination="paX-Fu-ai9" kind="show" identifier="aScore" id="3Gb-9T-U4L"/>
                                 </connections>
                             </button>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8BF-np-TgJ" customClass="RenderView" customModule="LetterWritingCheck" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="w-a" translatesAutoresizingMaskIntoConstraints="NO" id="MY8-AS-8De">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="w-a" translatesAutoresizingMaskIntoConstraints="NO" id="MY8-AS-8De">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="193" y="120" width="415" height="411"/>
-                                        </variation>
-                                    </imageView>
-                                </subviews>
-                                <gestureRecognizers/>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="MY8-AS-8De"/>
-                                    </mask>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="800" height="651"/>
-                                    <mask key="subviews">
-                                        <include reference="MY8-AS-8De"/>
-                                    </mask>
+                                    <rect key="frame" x="192" y="195" width="415" height="411"/>
                                 </variation>
-                            </view>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwz-b1-Bwx">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.75521515049999999" green="0.0798666918" blue="0.13758823689999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -902,20 +869,29 @@
                                     <segue destination="moz-kx-0Eh" kind="show" id="Dzr-dX-Kfe"/>
                                 </connections>
                             </button>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8BF-np-TgJ" customClass="RenderView" customModule="LetterWritingCheck" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="651"/>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.12761093039999999" green="0.8187880622" blue="0.85387352750000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="QpM-8g-I32"/>
-                                <exclude reference="8BF-np-TgJ"/>
+                                <exclude reference="MY8-AS-8De"/>
                                 <exclude reference="vwz-b1-Bwx"/>
+                                <exclude reference="8BF-np-TgJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
                                 <include reference="QpM-8g-I32"/>
-                                <include reference="8BF-np-TgJ"/>
+                                <include reference="MY8-AS-8De"/>
                                 <include reference="vwz-b1-Bwx"/>
+                                <include reference="8BF-np-TgJ"/>
                             </mask>
                         </variation>
                     </view>
@@ -940,29 +916,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0i6-qV-Uzk" customClass="RenderView" customModule="LetterWritingCheck" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="w-p" translatesAutoresizingMaskIntoConstraints="NO" id="0m8-88-Yad">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="w-p" translatesAutoresizingMaskIntoConstraints="NO" id="0m8-88-Yad">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="193" y="120" width="415" height="411"/>
-                                        </variation>
-                                    </imageView>
-                                </subviews>
-                                <gestureRecognizers/>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="0m8-88-Yad"/>
-                                    </mask>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="800" height="651"/>
-                                    <mask key="subviews">
-                                        <include reference="0m8-88-Yad"/>
-                                    </mask>
+                                    <rect key="frame" x="192" y="195" width="415" height="411"/>
                                 </variation>
-                            </view>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MwV-zF-Z11">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.75521515049999999" green="0.0798666918" blue="0.13758823689999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -995,20 +954,29 @@
                                     <segue destination="paX-Fu-ai9" kind="show" identifier="pScore" id="nhe-oW-T1M"/>
                                 </connections>
                             </button>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0i6-qV-Uzk" customClass="RenderView" customModule="LetterWritingCheck" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="651"/>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.12761093039999999" green="0.8187880622" blue="0.85387352750000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="0i6-qV-Uzk"/>
+                                <exclude reference="0m8-88-Yad"/>
                                 <exclude reference="MwV-zF-Z11"/>
                                 <exclude reference="GLG-L8-50f"/>
+                                <exclude reference="0i6-qV-Uzk"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
-                                <include reference="0i6-qV-Uzk"/>
+                                <include reference="0m8-88-Yad"/>
                                 <include reference="MwV-zF-Z11"/>
                                 <include reference="GLG-L8-50f"/>
+                                <include reference="0i6-qV-Uzk"/>
                             </mask>
                         </variation>
                     </view>
@@ -1035,10 +1003,10 @@
         <image name="w-s" width="99" height="170"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nhe-oW-T1M"/>
+        <segue reference="LBA-2A-zAB"/>
+        <segue reference="KkE-8m-stP"/>
+        <segue reference="BvT-rF-b3o"/>
         <segue reference="xzW-KM-GSe"/>
         <segue reference="2le-Sm-aHZ"/>
-        <segue reference="LBA-2A-zAB"/>
-        <segue reference="BvT-rF-b3o"/>
     </inferredMetricsTieBreakers>
 </document>
