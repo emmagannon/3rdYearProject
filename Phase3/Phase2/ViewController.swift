@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Phase2
+//  LetterWritingCheker
 //
 //  Created by Emma Gannon on 02/03/2016.
 //  Copyright © 2016 Emma Gannon. All rights reserved.

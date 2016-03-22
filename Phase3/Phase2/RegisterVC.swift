@@ -1,6 +1,6 @@
 //
 //  RegisterVC.swift
-//  Phase2
+//  LetterWritingCheker
 //
 //  Created by Emma Gannon on 09/03/2016.
 //  Copyright © 2016 Emma Gannon. All rights reserved.
@@ -38,7 +38,7 @@ class RegisterVC: UIViewController {
         {
             
             // display alert message
-            displayMyErrorMessage("All Fields are required");
+            displayMyErrorMessage("All fields are required");
             return;
         }
         
@@ -61,7 +61,7 @@ class RegisterVC: UIViewController {
         
         // display confirmation message
         
-        var myError = UIAlertController(title:"Error", message:"Registration Sucessful", preferredStyle: UIAlertControllerStyle.Alert);
+        let myError = UIAlertController(title:"Complete", message:"Registration Successful", preferredStyle: UIAlertControllerStyle.Alert);
         
         let okAction = UIAlertAction(title:"OK", style:UIAlertActionStyle.Default)
         {

@@ -1,6 +1,6 @@
 //
 //  PathRecogniser.swift
-//  Phase2
+//  LetterWritingCheker
 //
 //  Created by Emma Gannon on 15/03/2016.
 //  Copyright © 2016 Emma Gannon. All rights reserved.
@@ -9,7 +9,6 @@
 import Foundation
 
 public class PathRecogniser {
-    
     var deltaMove:Double
     var sliceCount:Int
     var costMax:Int
@@ -17,40 +16,35 @@ public class PathRecogniser {
     
     private var path:Path?
     
-    init (sliceCount:Int = 8, deltaMove:Double = 8.0, costMax:Int = 15){
+    init (sliceCount:Int = 8, deltaMove:Double = 8.0, costMax:Int = 3){
         self.sliceCount = sliceCount
         self.deltaMove = deltaMove
         self.costMax = costMax
     }
     
-    public func recognisePath(path:Path) -> PathModel? {
+    public func recognisePath(path:Path) -> Int? {
         
         self.path = path
-        
         if path.count < 2 {
-            return nil
+            return 100
         }
         
         let dir = directions()
         
         var bestCost = Int.max
-        var bestModel:PathModel?
         
         for model in models {
             
-            var cost = costLeven(model.directions, dir)
+            let cost = costLeven(model.directions, dir)
             
-            if model.filter != nil {
-                cost = model.filter!(cost, PathInfos(deltaPoints: deltaPoints(), boundingBox: path.boundingBox , directions: dir))
-            }
-            
-            if cost < costMax && cost < bestCost {
+            if (cost < costMax && cost < bestCost) {
                 bestCost = cost
-                bestModel = model
+            }
+            else{
+                bestCost = 10
             }
         }
-        
-        return bestModel
+        return bestCost
         
     }
     
@@ -135,8 +129,7 @@ public class PathRecogniser {
         var td = Array2D(cols: a.count + 1, rows: b.count + 1)
         var tw = Array2D(cols: a.count + 1, rows: b.count + 1)
         
-        let safe_max_value:Int = Int(Int16.max) // Don'n now why Int.max cause a EXEC_BAD error
-        //println("\(safe_max_value)")
+        let safe_max_value:Int = Int(Int16.max)
         
         
         for x in 1...a.count
@@ -196,8 +189,8 @@ public struct PathPoint : Equatable {
     public func squareDistanceFromPoint(point:PathPoint) -> Double {
         let dfx:Double = Double(point.x) - Double(x)
         let dfy:Double = Double(point.y) - Double(y)
-        let sqareDistance = dfx * dfx + dfy * dfy
-        return sqareDistance
+        let squareDistance = dfx * dfx + dfy * dfy
+        return squareDistance
     }
     
     public func angleWithPoint(point:PathPoint) -> Double {

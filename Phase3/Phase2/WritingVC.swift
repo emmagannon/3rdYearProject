@@ -1,115 +1,121 @@
 //
 //  WritingVC.swift
-//  Phase2
+//  LetterWritingCheker
 //
 //  Created by Emma Gannon on 15/03/2016.
 //  Copyright © 2016 Emma Gannon. All rights reserved.
 //
 
 import UIKit
+import AVFoundation
+
+var MenuURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bensound-jazzyfrenchy", ofType: "mp3")!)
+var buttonURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("ButtonPush", ofType: "wav")!)
+var lessonURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bensound-ukulele", ofType: "mp3")!)
+
+var lessonAP = AVAudioPlayer()
+var ButtonAudioPlayer = AVAudioPlayer()
+var MenuAudioPlayer = AVAudioPlayer()
 
 class WritingVC: UIViewController {
     
     var rawPoints:[Int] = []
     var recogniser:PathRecogniser?
+    var score: Int? = 0
 
-    @IBOutlet weak var Answer: UILabel!
+    
+
     @IBOutlet var drawLine: DrawLine!
+    @IBOutlet weak var ready: UIButton!
     
-    enum FilterOperation {
-        case Maximum
-        case Minimum
-    }
-    
-    enum FilterField {
-        case LastPointX
-        case LastPointY
+    @IBAction func buttonSound(sender: UIButton) {
+        do{
+            try ButtonAudioPlayer = AVAudioPlayer(contentsOfURL: buttonURL)
+        }catch _ {}
+        ButtonAudioPlayer.play()
     }
 
+    
     override func viewDidLoad() {
         
+        do{
+            try MenuAudioPlayer = AVAudioPlayer(contentsOfURL: MenuURL)
+            try lessonAP = AVAudioPlayer(contentsOfURL: lessonURL)
+            try FailSoundAP = AVAudioPlayer(contentsOfURL: FailSoundURL)
+            try sadAP = AVAudioPlayer(contentsOfURL: sadURL)
+        }catch _ {}
+        if(sadAP.playing){
+            sadAP.stop()
+        }
+        MenuAudioPlayer.play()
+
         let recogniser = PathRecogniser(sliceCount: 8, deltaMove: 16.0)
+        ready.enabled = false
+        ready.hidden = true
         
-        let maxy3 = WritingVC.customFilter(self)(.Maximum, .LastPointY, 0.3)
-        let miny3 = WritingVC.customFilter(self)(.Minimum, .LastPointY, 0.3)
-        let maxy7 = WritingVC.customFilter(self)(.Maximum, .LastPointY, 0.7)
-        let miny7 = WritingVC.customFilter(self)(.Minimum, .LastPointY, 0.7)
+        recogniser.addModel(PathModel(directions: [2,6,7,0,1,2], datas:"n"))
         
-        
-        recogniser.addModel(PathModel(directions: [7, 1], datas:"A"))
-        recogniser.addModel(PathModel(directions: [2,6,0,1,2,3,4,0,1,2,3,4], datas:"B"))
-        recogniser.addModel(PathModel(directions: [4,3,2,1,0], datas:"C"))
-        recogniser.addModel(PathModel(directions: [2,6,7,0,1,2,3,4], datas:"D", filter:miny7))
-        recogniser.addModel(PathModel(directions: [4,3,2,1,0,4,3,2,1,0], datas:"E"))
-        recogniser.addModel(PathModel(directions: [4,2], datas:"F"))
-        recogniser.addModel(PathModel(directions: [4,3,2,1,0,7,6,5,0], datas:"G", filter:miny3))
-        recogniser.addModel(PathModel(directions: [2,6,7,0,1,2], datas:"H"))
-        recogniser.addModel(PathModel(directions: [2], datas:"I"))
-        recogniser.addModel(PathModel(directions: [2,3,4], datas:"J"))
-        recogniser.addModel(PathModel(directions: [3,4,5,6,7,0,1], datas:"K"))
-        recogniser.addModel(PathModel(directions: [2,0], datas:"L"))
-        recogniser.addModel(PathModel(directions: [6,1,7,2], datas:"M"))
-        recogniser.addModel(PathModel(directions: [6,1,6], datas:"N"))
-        recogniser.addModel(PathModel(directions: [4,3,2,1,0,7,6,5,4], datas:"O", filter:maxy3))
-        recogniser.addModel(PathModel(directions: [2,6,7,0,1,2,3,4], datas:"P", filter:maxy7))
-        recogniser.addModel(PathModel(directions: [4,3,2,1,0,7,6,5,4,0], datas:"Q", filter: maxy3))
-        recogniser.addModel(PathModel(directions: [2,6,7,0,1,2,3,4,1], datas:"R"))
-        recogniser.addModel(PathModel(directions: [4,3,2,1,0,1,2,3,4], datas:"S"))
-        recogniser.addModel(PathModel(directions: [0,2], datas:"T"))
-        recogniser.addModel(PathModel(directions: [2,1,0,7,6], datas:"U"))
-        recogniser.addModel(PathModel(directions: [1,7,0], datas:"V"))
-        recogniser.addModel(PathModel(directions: [2,7,1,6], datas:"W"))
-        recogniser.addModel(PathModel(directions: [1,0,7,6,5,4,3], datas:"X"))
-        recogniser.addModel(PathModel(directions: [2,1,0,7,6,2,3,4,5,6,7], datas:"Y"))
-        recogniser.addModel(PathModel(directions: [0,3,0], datas:"Z"))
-        
-        //recogniser.addModel(PathModel(directions: [7, 1], datas:"A"))
-        //recogniser.addModel(PathModel(directions: [6,1,6], datas:"N"))
-        //recogniser.addModel(PathModel(directions: [2,6,7,0,1,2,3,4], datas:"P", filter:maxy7))
-        //recogniser.addModel(PathModel(directions: [4,3,2,1,0,1,2,3,4], datas:"S"))
         
         self.recogniser = recogniser
         
         super.viewDidLoad()
         
     }
-
-    func minLastY(cost:Int, infos:PathInfos, minValue:Double)->Int
-    {
-        let py:Double = (Double(infos.deltaPoints.last!.y) - Double(infos.boundingBox.top)) / Double(infos.height)
-        return py < minValue ? Int.max : cost
-    }
     
-    func maxLastY(cost:Int, infos:PathInfos, maxValue:Double)->Int
-    {
-        let py:Double = (Double(infos.deltaPoints.last!.y) - Double(infos.boundingBox.top)) / Double(infos.height)
-        return py > maxValue ? Int.max : cost
-    }
-    
-    func customFilter(operation:FilterOperation,_ field:FilterField, _ value:Double)(cost:Int, infos:PathInfos)->Int
-    {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        var pvalue:Double
-        
-        switch field
-        {
-        case .LastPointY:
-            pvalue = (Double(infos.deltaPoints.last!.y) - Double(infos.boundingBox.top)) / Double(infos.height)
-        case .LastPointX:
-            pvalue = (Double(infos.deltaPoints.last!.x) - Double(infos.boundingBox.left)) / Double(infos.width)
-        }
-        
-        switch operation
-        {
-            case .Maximum:
-                return pvalue > value ? Int.max : cost
-            case .Minimum:
-                return pvalue < value ? Int.max : cost
+        if(segue.identifier == "nScore"){
+            let destination = segue.destinationViewController as! ResultVC
+            destination.score = score
+            destination.letter = "n"
         }
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
-    {
+    func lowY(points: [Int]) ->Int{
+        var counter: Int = 3
+        var lowest: Int = points[1]
+        let secondLowest: Int = points.last!
+        while (counter < points.count){
+            if(points[counter] > lowest){
+                lowest = points[counter]
+            }
+            if(points.count > (counter + 1)){
+                if(points[counter + 2] < lowest){
+                    break
+                }
+            }
+            counter += 2
+        }
+        return (abs(lowest - secondLowest))
+    }
+    
+    func highY(points: [Int])->Int {
+        var counter: Int = 3
+        var highest: Int = 0
+        var temp: Int = 0
+        let secondHighest: Int = points[1]
+        while (counter < points.count){
+            if(points.count > (counter + 2)){
+                if(points[counter] > points[counter+2]){
+                    temp = points[counter]
+                    highest = points[counter+2]
+                }
+            }
+            if(temp != 0 && highest > points[counter]){
+                highest = points[counter]
+            }
+            counter += 2
+        }
+        return (abs(highest - secondHighest))
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        rawPoints.removeAll()
+        viewDidLoad()
+        self.drawLine.pointsToDraw = rawPoints
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         rawPoints = []
         let touch = touches.first
         let location = touch!.locationInView(view)
@@ -117,8 +123,7 @@ class WritingVC: UIViewController {
         rawPoints.append(Int(location.y))
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?)
-    {
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let touch = touches.first
         let location = touch!.locationInView(view)
         rawPoints.append(Int(location.x))
@@ -127,31 +132,27 @@ class WritingVC: UIViewController {
         self.drawLine.pointsToDraw = rawPoints
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?)
-    {
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
         
         var path:Path = Path()
         path.addPointFromRaw(rawPoints)
-        
-        let gesture:PathModel? = self.recogniser!.recognisePath(path)
-        
-        if gesture != nil
-        {
-            Answer.text = gesture!.datas as? String
+        if(rawPoints.count > 4){
+            let low:Int = lowY(rawPoints)
+            let high:Int = highY(rawPoints)
+            let diffL:Int = low/30
+            let diffH:Int = high/30
+            score = score! + diffL + diffH
         }
-        else
-        {
-            Answer.text = "Incorrect"
-        }
+        ready.hidden = false
+        ready.enabled = true
     }
     
     
     
-    override func didReceiveMemoryWarning()
-    {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-
+    
+    
 }

@@ -1,6 +1,6 @@
 //
 //  FizzyVC.swift
-//  Phase2
+//  LetterWritingCheker
 //
 //  Created by Emma Gannon on 10/03/2016.
 //  Copyright © 2016 Emma Gannon. All rights reserved.

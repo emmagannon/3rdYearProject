@@ -1,6 +1,6 @@
 //
 //  SelectStudentVC.swift
-//  Phase2
+//  LetterWritingCheker
 //
 //  Created by Emma Gannon on 11/03/2016.
 //  Copyright © 2016 Emma Gannon. All rights reserved.
@@ -65,9 +65,10 @@ class SelectStudentVC: UIViewController, UITableViewDataSource,UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:StudentCell = tableView.dequeueReusableCellWithIdentifier("cell") as! StudentCell
         let student:StudentInfo = marrStudentData.objectAtIndex(indexPath.row) as! StudentInfo
-        cell.lblContent.text = " \(student.Name) - Marks :"
+        cell.lblContent.text = " \(student.Name)"
         cell.DeleteButton.tag = indexPath.row
         //cell.btnEdit.tag = indexPath.row
+        cell.nMark.text = "\(student.nmark)"
         return cell
     }
     
@@ -79,9 +80,9 @@ class SelectStudentVC: UIViewController, UITableViewDataSource,UITableViewDelega
         let studentInfo: StudentInfo = marrStudentData.objectAtIndex(selectedIndex) as! StudentInfo
         let isDeleted = ModelManager.getInstance().deleteStudentData(studentInfo)
         if isDeleted {
-            Util.invokeAlertMethod("", strBody: "Student record deleted successfully.", delegate: nil)
+            Util.invokeAlertMethod("Complete", strBody: "Student record deleted successfully.", delegate: nil)
         } else {
-            Util.invokeAlertMethod("", strBody: "Error in deleting record.", delegate: nil)
+            Util.invokeAlertMethod("Error", strBody: "Error in deleting record.", delegate: nil)
         }
         self.getStudentData()
     }
@@ -90,7 +91,7 @@ class SelectStudentVC: UIViewController, UITableViewDataSource,UITableViewDelega
     {
         if(studentNameTextField.text == "")
         {
-            Util.invokeAlertMethod("", strBody: "Please enter student name.", delegate: nil)
+            Util.invokeAlertMethod("Error", strBody: "Please enter student name.", delegate: nil)
         }
         else
         {
@@ -100,12 +101,15 @@ class SelectStudentVC: UIViewController, UITableViewDataSource,UITableViewDelega
                 studentInfo.RollNo = studentData.RollNo
                 studentInfo.Name = studentNameTextField.text!
                 //studentInfo.Marks = txtMarks.text!
-                //let isUpdated = ModelManager.getInstance().updateStudentData(studentInfo)
-                //if isUpdated {
-                //    Util.invokeAlertMethod("", strBody: "Student record updated successfully.", delegate: nil)
-                //} else {
-                //    Util.invokeAlertMethod("", strBody: "Error in updating record.", delegate: nil)
-                //}
+                let isUpdated = ModelManager.getInstance().updateStudentData(studentInfo)
+                if isUpdated
+                {
+                    Util.invokeAlertMethod("", strBody: "Student record updated successfully.", delegate: nil)
+                }
+                else
+                {
+                    Util.invokeAlertMethod("", strBody: "Error in updating record.", delegate: nil)
+                }
             }
             else
             {
@@ -114,9 +118,9 @@ class SelectStudentVC: UIViewController, UITableViewDataSource,UITableViewDelega
                 //studentInfo.Marks = txtMarks.text!
                 let isInserted = ModelManager.getInstance().addStudentData(studentInfo)
                 if isInserted {
-                    Util.invokeAlertMethod("", strBody: "Student record added successfully.", delegate: nil)
+                    Util.invokeAlertMethod("Complete", strBody: "Student record added successfully.", delegate: nil)
                 } else {
-                    Util.invokeAlertMethod("", strBody: "Error in adding student record.", delegate: nil)
+                    Util.invokeAlertMethod("Error", strBody: "Error in adding student record.", delegate: nil)
                 }
             }
             self.navigationController?.popViewControllerAnimated(true)
