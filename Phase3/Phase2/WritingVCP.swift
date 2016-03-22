@@ -14,7 +14,8 @@ class WritingVCP: UIViewController {
     var recogniser:PathRecogniser?
     var score: Int? = 0
 
-    @IBOutlet weak var drawLineP: DrawLine!
+    //@IBOutlet weak var drawLineP: DrawLine!
+    @IBOutlet weak var renderView: RenderView!
     @IBOutlet weak var readyP: UIButton!
     
     
@@ -83,7 +84,7 @@ class WritingVCP: UIViewController {
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         rawPointsP.removeAll()
         viewDidLoad()
-        self.drawLineP.pointsToDraw = rawPointsP
+        self.renderView.pointsToDraw = rawPointsP
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -100,7 +101,7 @@ class WritingVCP: UIViewController {
         rawPointsP.append(Int(location.x))
         rawPointsP.append(Int(location.y))
         
-        self.drawLineP.pointsToDraw = rawPointsP
+        self.renderView.pointsToDraw = rawPointsP
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {

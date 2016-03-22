@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B50930651C884F2E00D29DAA /* target.h in Headers */ = {isa = PBXBuildFile; fileRef = B50930641C884F2E00D29DAA /* target.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B50930691C884F2E00D29DAA /* target.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50930621C884F2E00D29DAA /* target.framework */; };
-		B509306A1C884F2E00D29DAA /* target.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B50930621C884F2E00D29DAA /* target.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B50975581C9F0F1500163B11 /* IntroFinal.gif in Resources */ = {isa = PBXBuildFile; fileRef = B50975571C9F0F1500163B11 /* IntroFinal.gif */; };
 		B509755A1CA0121600163B11 /* WritingVCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50975591CA0121600163B11 /* WritingVCS.swift */; };
 		B509755C1CA0122700163B11 /* WritingVCA.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509755B1CA0122700163B11 /* WritingVCA.swift */; };
@@ -30,11 +28,14 @@
 		B514C5DF1C98AAD300480C34 /* DrawLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509305B1C884A4600D29DAA /* DrawLine.swift */; };
 		B51EDA931C9C1C3300457B77 /* Student.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B51EDA921C9C1C3300457B77 /* Student.sqlite */; };
 		B51EDA971C9C1D4700457B77 /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51EDA961C9C1D4700457B77 /* ResultVC.swift */; };
+		B521A88F1CA19D56007E316C /* DrawLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509305B1C884A4600D29DAA /* DrawLine.swift */; };
+		B521A8911CA1C8EF007E316C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B521A8901CA1C8EF007E316C /* AVFoundation.framework */; };
+		B521A8921CA1C8FD007E316C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B591F5D31C886B46001F2043 /* CoreGraphics.framework */; };
+		B521A8931CA1C90D007E316C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B591F5D11C886B32001F2043 /* UIKit.framework */; };
+		B521A8951CA1CC86007E316C /* RenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B521A8941CA1CC86007E316C /* RenderView.swift */; };
 		B583D8411C86F28100767754 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B583D83F1C86F28100767754 /* Main.storyboard */; };
 		B583D8461C86F28100767754 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B583D8451C86F28100767754 /* Assets.xcassets */; };
 		B583D8491C86F28100767754 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B583D8471C86F28100767754 /* LaunchScreen.storyboard */; };
-		B583D87D1C870BF900767754 /* Draw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B583D8761C870BF900767754 /* Draw.framework */; };
-		B583D87E1C870BF900767754 /* Draw.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B583D8761C870BF900767754 /* Draw.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B591F5D21C886B32001F2043 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B591F5D11C886B32001F2043 /* UIKit.framework */; };
 		B591F5D41C886B46001F2043 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B591F5D31C886B46001F2043 /* CoreGraphics.framework */; };
 		B5B42C271C931BBC0005839E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B42C261C931BBC0005839E /* libsqlite3.0.tbd */; };
@@ -55,23 +56,6 @@
 		B5FCE1561C96DCA000B3A9D3 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE1551C96DCA000B3A9D3 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B50930671C884F2E00D29DAA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B583D8301C86F28100767754 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B50930611C884F2E00D29DAA;
-			remoteInfo = target;
-		};
-		B583D87B1C870BF900767754 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B583D8301C86F28100767754 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B583D8751C870BF900767754;
-			remoteInfo = Draw;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		B583D8821C870BF900767754 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -79,8 +63,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B583D87E1C870BF900767754 /* Draw.framework in Embed Frameworks */,
-				B509306A1C884F2E00D29DAA /* target.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,6 +92,8 @@
 		B514C5DD1C98A42800480C34 /* PathRecogniser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathRecogniser.swift; sourceTree = "<group>"; };
 		B51EDA921C9C1C3300457B77 /* Student.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = Student.sqlite; path = ../../Student.sqlite; sourceTree = "<group>"; };
 		B51EDA961C9C1D4700457B77 /* ResultVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
+		B521A8901CA1C8EF007E316C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B521A8941CA1CC86007E316C /* RenderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RenderView.swift; path = "../../workingRecogniserNPAS/DBPathRecognizer-master-2/PathRecognizer/RenderView.swift"; sourceTree = "<group>"; };
 		B558021A1C905EAB001C5E89 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		B583D8381C86F28100767754 /* LetterWritingCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetterWritingCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B583D83B1C86F28100767754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -155,9 +139,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B521A8931CA1C90D007E316C /* UIKit.framework in Frameworks */,
+				B521A8921CA1C8FD007E316C /* CoreGraphics.framework in Frameworks */,
+				B521A8911CA1C8EF007E316C /* AVFoundation.framework in Frameworks */,
 				B5FAB4A61C9742C300539971 /* libsqlite3.0.tbd in Frameworks */,
-				B583D87D1C870BF900767754 /* Draw.framework in Frameworks */,
-				B50930691C884F2E00D29DAA /* target.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +237,7 @@
 		B514C5D81C98A17300480C34 /* Writing */ = {
 			isa = PBXGroup;
 			children = (
+				B521A8941CA1CC86007E316C /* RenderView.swift */,
 				B509305B1C884A4600D29DAA /* DrawLine.swift */,
 				B514C5DD1C98A42800480C34 /* PathRecogniser.swift */,
 				B51EDA961C9C1D4700457B77 /* ResultVC.swift */,
@@ -266,6 +252,7 @@
 		B583D82F1C86F28100767754 = {
 			isa = PBXGroup;
 			children = (
+				B521A8901CA1C8EF007E316C /* AVFoundation.framework */,
 				B5FAB49F1C97241500539971 /* LetterWritingChecker-Bridging-Header.h */,
 				B5B42C261C931BBC0005839E /* libsqlite3.0.tbd */,
 				B591F5D31C886B46001F2043 /* CoreGraphics.framework */,
@@ -365,8 +352,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				B583D87C1C870BF900767754 /* PBXTargetDependency */,
-				B50930681C884F2E00D29DAA /* PBXTargetDependency */,
 			);
 			name = LetterWritingCheck;
 			productName = Phase2;
@@ -527,6 +512,7 @@
 				B51EDA971C9C1D4700457B77 /* ResultVC.swift in Sources */,
 				B5FAB4971C97228300539971 /* LoginVC.swift in Sources */,
 				B509755C1CA0122700163B11 /* WritingVCA.swift in Sources */,
+				B521A8951CA1CC86007E316C /* RenderView.swift in Sources */,
 				B5FAB4961C97227F00539971 /* RegisterVC.swift in Sources */,
 				B514C5DA1C98A1DF00480C34 /* WritingVC.swift in Sources */,
 				B5FAB4951C97227C00539971 /* ViewController.swift in Sources */,
@@ -545,6 +531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B521A88F1CA19D56007E316C /* DrawLine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,19 +543,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B50930681C884F2E00D29DAA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B50930611C884F2E00D29DAA /* target */;
-			targetProxy = B50930671C884F2E00D29DAA /* PBXContainerItemProxy */;
-		};
-		B583D87C1C870BF900767754 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B583D8751C870BF900767754 /* Draw */;
-			targetProxy = B583D87B1C870BF900767754 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B583D83F1C86F28100767754 /* Main.storyboard */ = {
@@ -721,6 +695,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Phase2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -728,7 +703,7 @@
 				PRODUCT_NAME = LetterWritingCheck;
 				SWIFT_OBJC_BRIDGING_HEADER = "Phase2/Phase2-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -738,13 +713,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Phase2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CA326.LetterWritingChecker;
 				PRODUCT_NAME = LetterWritingCheck;
 				SWIFT_OBJC_BRIDGING_HEADER = "Phase2/Phase2-Bridging-Header.h";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

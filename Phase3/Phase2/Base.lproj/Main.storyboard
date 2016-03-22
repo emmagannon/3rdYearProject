@@ -596,13 +596,13 @@
                                     <segue destination="paX-Fu-ai9" kind="show" identifier="nScore" id="cTR-3O-Ajk"/>
                                 </connections>
                             </button>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUA-oZ-2Bs" customClass="DrawLine" customModule="LetterWritingCheck" customModuleProvider="target">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUA-oZ-2Bs" customClass="RenderView" customModule="LetterWritingCheck" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="w-n" translatesAutoresizingMaskIntoConstraints="NO" id="qGV-Yl-t31">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="113" y="45" width="415" height="411"/>
+                                            <rect key="frame" x="193" y="126" width="415" height="411"/>
                                         </variation>
                                     </imageView>
                                 </subviews>
@@ -613,7 +613,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="80" y="162" width="640" height="502"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="664"/>
                                     <mask key="subviews">
                                         <include reference="qGV-Yl-t31"/>
                                     </mask>
@@ -637,8 +637,8 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="drawLine" destination="KUA-oZ-2Bs" id="Lox-S6-8KQ"/>
                         <outlet property="ready" destination="UdN-h8-nW2" id="HDW-hR-Eif"/>
+                        <outlet property="renderView" destination="KUA-oZ-2Bs" id="3A2-HW-GG4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="08D-8L-Ibh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -671,13 +671,13 @@
                                     <segue destination="paX-Fu-ai9" kind="show" identifier="sScore" id="KkE-8m-stP"/>
                                 </connections>
                             </button>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ymu-Oq-gny" customClass="DrawLine" customModule="LetterWritingCheck" customModuleProvider="target">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ymu-Oq-gny" customClass="RenderView" customModule="LetterWritingCheck" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="w-s" translatesAutoresizingMaskIntoConstraints="NO" id="b7h-qq-f9U">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="113" y="45" width="415" height="411"/>
+                                            <rect key="frame" x="193" y="121" width="415" height="411"/>
                                         </variation>
                                     </imageView>
                                 </subviews>
@@ -688,7 +688,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="84" y="152" width="640" height="502"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="654"/>
                                     <mask key="subviews">
                                         <include reference="b7h-qq-f9U"/>
                                     </mask>
@@ -730,8 +730,8 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="drawLine" destination="Ymu-Oq-gny" id="QsZ-tB-i19"/>
                         <outlet property="readyS" destination="fvI-Ru-ZK0" id="a7X-50-BLH"/>
+                        <outlet property="renderView" destination="Ymu-Oq-gny" id="a8e-UE-7r4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6BC-Lz-MXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -750,23 +750,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1P-2k-Ksy">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.75521515049999999" green="0.0798666918" blue="0.13758823689999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image5" translatesAutoresizingMaskIntoConstraints="NO" id="ISr-r1-R6S" userLabel="Pass">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="15" y="721" width="82" height="59"/>
+                                    <rect key="frame" x="97" y="47" width="491" height="385"/>
                                 </variation>
-                                <connections>
-                                    <action selector="backToA:" destination="paX-Fu-ai9" eventType="touchUpInside" id="rbT-QA-3gj"/>
-                                    <action selector="backToN:" destination="paX-Fu-ai9" eventType="touchUpInside" id="eEE-pa-m5A"/>
-                                    <action selector="backToP:" destination="paX-Fu-ai9" eventType="touchUpInside" id="FLS-oq-M4l"/>
-                                    <action selector="backToS:" destination="paX-Fu-ai9" eventType="touchUpInside" id="g4C-N4-a2b"/>
-                                </connections>
-                            </button>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image4" translatesAutoresizingMaskIntoConstraints="NO" id="W1r-pI-tDp" userLabel="Fail">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
@@ -781,7 +770,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="698" y="721" width="82" height="59"/>
+                                    <rect key="frame" x="698" y="657" width="82" height="59"/>
                                 </variation>
                                 <connections>
                                     <action selector="goAfterA:" destination="paX-Fu-ai9" eventType="touchUpInside" id="CgJ-o7-SNK"/>
@@ -791,28 +780,39 @@
                                     <segue destination="5T9-I2-HiF" kind="show" id="xzW-KM-GSe"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image5" translatesAutoresizingMaskIntoConstraints="NO" id="ISr-r1-R6S" userLabel="Pass">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1P-2k-Ksy">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.75521515049999999" green="0.0798666918" blue="0.13758823689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="97" y="47" width="491" height="385"/>
+                                    <rect key="frame" x="20" y="657" width="82" height="59"/>
                                 </variation>
-                            </imageView>
+                                <connections>
+                                    <action selector="backToA:" destination="paX-Fu-ai9" eventType="touchUpInside" id="rbT-QA-3gj"/>
+                                    <action selector="backToN:" destination="paX-Fu-ai9" eventType="touchUpInside" id="eEE-pa-m5A"/>
+                                    <action selector="backToP:" destination="paX-Fu-ai9" eventType="touchUpInside" id="FLS-oq-M4l"/>
+                                    <action selector="backToS:" destination="paX-Fu-ai9" eventType="touchUpInside" id="g4C-N4-a2b"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12761093039999999" green="0.8187880622" blue="0.85387352750000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="P1P-2k-Ksy"/>
+                                <exclude reference="ISr-r1-R6S"/>
                                 <exclude reference="W1r-pI-tDp"/>
                                 <exclude reference="aZ0-9J-UHy"/>
-                                <exclude reference="ISr-r1-R6S"/>
+                                <exclude reference="P1P-2k-Ksy"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
-                                <include reference="P1P-2k-Ksy"/>
+                                <include reference="ISr-r1-R6S"/>
                                 <include reference="W1r-pI-tDp"/>
                                 <include reference="aZ0-9J-UHy"/>
-                                <include reference="ISr-r1-R6S"/>
+                                <include reference="P1P-2k-Ksy"/>
                             </mask>
                         </variation>
                     </view>
@@ -861,13 +861,13 @@
                                     <segue destination="paX-Fu-ai9" kind="show" identifier="aScore" id="3Gb-9T-U4L"/>
                                 </connections>
                             </button>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8BF-np-TgJ" customClass="DrawLine" customModule="LetterWritingCheck" customModuleProvider="target">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8BF-np-TgJ" customClass="RenderView" customModule="LetterWritingCheck" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="w-a" translatesAutoresizingMaskIntoConstraints="NO" id="MY8-AS-8De">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="113" y="45" width="415" height="411"/>
+                                            <rect key="frame" x="193" y="120" width="415" height="411"/>
                                         </variation>
                                     </imageView>
                                 </subviews>
@@ -878,7 +878,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="125" y="149" width="640" height="502"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="651"/>
                                     <mask key="subviews">
                                         <include reference="MY8-AS-8De"/>
                                     </mask>
@@ -920,8 +920,8 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="drawLineA" destination="8BF-np-TgJ" id="ymJ-oe-HEp"/>
                         <outlet property="readyA" destination="QpM-8g-I32" id="R53-Tl-5K4"/>
+                        <outlet property="renderView" destination="8BF-np-TgJ" id="e5U-nP-DQP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CAG-j9-aEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -940,27 +940,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLG-L8-50f">
-                                <rect key="frame" x="494" y="521" width="78" height="47"/>
-                                <color key="backgroundColor" red="0.048870686410000003" green="0.75521515049999999" blue="0.43013878579999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="GO">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="698" y="721" width="82" height="59"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="paX-Fu-ai9" kind="show" identifier="pScore" id="nhe-oW-T1M"/>
-                                </connections>
-                            </button>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0i6-qV-Uzk" customClass="DrawLine" customModule="LetterWritingCheck" customModuleProvider="target">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0i6-qV-Uzk" customClass="RenderView" customModule="LetterWritingCheck" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="w-p" translatesAutoresizingMaskIntoConstraints="NO" id="0m8-88-Yad">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="113" y="45" width="415" height="411"/>
+                                            <rect key="frame" x="193" y="120" width="415" height="411"/>
                                         </variation>
                                     </imageView>
                                 </subviews>
@@ -971,7 +957,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="142" y="-5" width="640" height="502"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="651"/>
                                     <mask key="subviews">
                                         <include reference="0m8-88-Yad"/>
                                     </mask>
@@ -995,26 +981,40 @@
                                     <segue destination="aOM-gH-Dt8" kind="show" id="bMS-1h-8aM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLG-L8-50f">
+                                <rect key="frame" x="494" y="521" width="78" height="47"/>
+                                <color key="backgroundColor" red="0.048870686410000003" green="0.75521515049999999" blue="0.43013878579999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="GO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="692" y="721" width="82" height="59"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="paX-Fu-ai9" kind="show" identifier="pScore" id="nhe-oW-T1M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12761093039999999" green="0.8187880622" blue="0.85387352750000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="GLG-L8-50f"/>
                                 <exclude reference="0i6-qV-Uzk"/>
                                 <exclude reference="MwV-zF-Z11"/>
+                                <exclude reference="GLG-L8-50f"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
-                                <include reference="GLG-L8-50f"/>
                                 <include reference="0i6-qV-Uzk"/>
                                 <include reference="MwV-zF-Z11"/>
+                                <include reference="GLG-L8-50f"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="drawLineP" destination="0i6-qV-Uzk" id="gHy-uJ-5X2"/>
                         <outlet property="readyP" destination="GLG-L8-50f" id="22b-3U-EhZ"/>
+                        <outlet property="renderView" destination="0i6-qV-Uzk" id="cZW-Vg-HGu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pnd-wm-0bF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1035,10 +1035,10 @@
         <image name="w-s" width="99" height="170"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gMp-gc-3Ct"/>
+        <segue reference="nhe-oW-T1M"/>
+        <segue reference="xzW-KM-GSe"/>
         <segue reference="2le-Sm-aHZ"/>
         <segue reference="LBA-2A-zAB"/>
-        <segue reference="KkE-8m-stP"/>
         <segue reference="BvT-rF-b3o"/>
     </inferredMetricsTieBreakers>
 </document>

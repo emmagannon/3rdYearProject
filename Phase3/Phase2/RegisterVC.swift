@@ -77,7 +77,7 @@ class RegisterVC: UIViewController {
     func displayMyErrorMessage(userMessage:String)
     {
         
-        var myError = UIAlertController(title:"Error", message:userMessage, preferredStyle: UIAlertControllerStyle.Alert);
+        let myError = UIAlertController(title:"Error", message:userMessage, preferredStyle: UIAlertControllerStyle.Alert);
         
         let okAction = UIAlertAction(title:"OK", style:UIAlertActionStyle.Default, handler:nil);
         

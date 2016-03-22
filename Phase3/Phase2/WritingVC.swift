@@ -25,7 +25,8 @@ class WritingVC: UIViewController {
 
     
 
-    @IBOutlet var drawLine: DrawLine!
+    @IBOutlet weak var renderView: RenderView!
+    //@IBOutlet var drawLine: DrawLine!
     @IBOutlet weak var ready: UIButton!
     
     @IBAction func buttonSound(sender: UIButton) {
@@ -112,7 +113,7 @@ class WritingVC: UIViewController {
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         rawPoints.removeAll()
         viewDidLoad()
-        self.drawLine.pointsToDraw = rawPoints
+        self.renderView.pointsToDraw = rawPoints
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -129,7 +130,7 @@ class WritingVC: UIViewController {
         rawPoints.append(Int(location.x))
         rawPoints.append(Int(location.y))
         
-        self.drawLine.pointsToDraw = rawPoints
+        self.renderView.pointsToDraw = rawPoints
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
